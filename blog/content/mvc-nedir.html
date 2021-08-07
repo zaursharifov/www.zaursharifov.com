@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./content.css">
+    <title>Mvc Nedir</title>
+  </head>
+  <body>
+    <p>
+      <b>Mvc (Model-View-Controller),</b> yazdığımız uygulamanın iş mantığı ile
+      (business logic) kullanıcı arayüzünü birbirinden ayrıştıran, uygulamanın
+      farklı amaçlara hizmet eden kısımlarının birbirine girmesini engelleyen
+      yazılım mimarisidir. Bununla yazılan kodu daha rahat geliştirebilir ve
+      test edilebilir (yani daha az hata çıkartma potansiyeline sahip) hale
+      getirmiş oluruz. Günümüzde MVC denince akla Microsoft’un geliştirdiği
+      ASP.NET MVC Framework gelmektedir, oysa 1979 yılından beri yazılım
+      dünyasında yer almaktadır.
+      <h3>Model</h3>
+      MVC dünyasında model uygulama verisinin veya durumunun saklandığı yerdir, genellikle veritabanı veya xml/json dosyası formatındadır. Model, veri katmanını (databes, xml, json dosyası vb.) uygulamadan izole eder, böylece diğer katmanlarda veri katmanının neresi olduğunun bilinmesine gerek kalmaz.
+      <br/>
+      Model katmanı sıklıkla Entity Framework, Nhibernate, LLBLGen vb. gibi araçlar kullanılarak oluşturulur.
+      <h3>View</h3>
+      View, istemcinin gördüğü arayüzü içeren katmandır (kullanıcıların gördüğü kısım, arayüz) genellikle Model katmanındaki verinin kullanılması ile oluşturulur. View katmanının Model ve Controller katmanlarından ayrılması ile arayüz değişikliklerinin uygulamanın diğer katmanlarını değiştirmeye gerek kalmadan yapılabilmesi sağlanmıştır.
+      <br/>
+      View katmanında HTML5 ve CSS3 gibi son versiyon teknolojiler kullanmak mümkündür.
+      <h3>Controller</h3>
+      Controller, istemciden gelen isteği işlemek, Model ve View katmanları arasında köprü olmak gibi görevleri yerine getirir. Controller içerisinde bir veya daha fazla Action olabilir, genellikle her Action bir web sayfası üretmek için kullanılır.
+      <br/><br/>
+      <hr>
+      <h3>Örnek program</h3>
+      <ul>
+        <li>Satranç uygulaması yaptığımızı düşünelim</li>
+        <li><b>Model</b>’de oyunun “durumu” barındırılacaktır. Oyunun durumunu değiştirecek etkiler (örneğin bir taşın hareketini doğru olup olmadığı) veya oyunun bitip bitmediği gibi bilgiler model üzerinde yer alacaktır. Kısaca, oyunun tüm bilgileri ve yapılacak işlemlerin validasyonu Model üzerinde barınacak.</li>
+        <li><b>Controller</b> ise View ve Model arasında haberleşmeyi sağlayacaktır. Örneğin, kullanıcı View’da yer alan “Yeni oyun başlat” butonuna bastığında Controller, Model’e giderek böyle bir isteğin geldiğini söyleyecektir. (Tüm bu işleri yapan Model olacaktır, Controller’in amacı böyle bir isteğin geldiğini ve alakalı isteğin detaylarını Model’e iletmektir).</li>
+        <li><b>View</b> kısmında satranç tahtasının görünümü, yönettiğimiz piyonların şekilleri ve piyonları hareket ettirdiğimizde hangi piyonun nereye gittiğini söyleyen bildirimler yer alacaktır. Piyonların nasıl hareket ettiği, oyunun durumuyla ilgili mantıksa bilgilerin View ile hiçbir işi olmayacaktır. View sadece ve sadece görselliği barındıracaktır.</li>
+      </ul>
+      <hr>
+      <h3>Sonuç</h3>
+      MVC sayesinde Model ve View yapısını ayrıştırmış oluyoruz. Böylelikle uygulamamızın görünümünü değiştirmek durumunda kaldığımızda “yalnızca” görünümle uğraşmamız gerekecek. İç içe geçmiş, spagetti bir kodla uğraşmak durumunda kalmış olsaydık, sadece görünümü değiştirmek isterken uygulamanın işleyişini de değiştirmemiz gerekecekti. Ayrıca, bu ayrıştırma sayesinde Model ve View yapımızda ihtiyaç duyduğumuz parçaları, başka projelerde de tekrar kullanabilir hale getirmiş oluruz. Sonuçta, yazılım geliştirmede yegane amacımız “hatadan uzak olmak” ve “zamandan tasarruf etmek”.
+    </p>
+    <hr>
+    <h1>KAYNAKÇA</h1>
+    <div class="vl">
+      <a href="https://softwareengineering.stackexchange.com/questions/141795/is-the-c-in-mvc-really-necessary/141811#141811">https://softwareengineering.stackexchange.com/questions/141795/is-the-c-in-mvc-really-necessary/141811#141811</a>
+      <a href="http://www.borakasmer.com/asp-net-mvc-nedir-ne-ise-yarar/">http://www.borakasmer.com/asp-net-mvc-nedir-ne-ise-yarar/</a>
+    </div>
+  </body>
+</html>

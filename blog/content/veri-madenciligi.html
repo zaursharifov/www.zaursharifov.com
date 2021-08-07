@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./content.css">
+    <title>Veri Madenciligi</title>
+</head>
+<body>
+  <p>
+    Veri madenciliği, büyük ölçekli veriler arasında bilgiye ulaşma, bilgiyi madenleme işidir. Ya da bir anlamda büyük veri yığınlar içerisinden gelecek ile ilgili tahminde bulunabilmemizi sağlayabilecek bağıntıların bilgisayar programı kullanarak aranmasıdır. Veri madenciliği deyimi yanlış kullanılan bir deyim olabileceğinden buna eş değer başka kullanımlar da literatüre geçmiştir; Veritabanlarında bilgi madenciliği (Knowledge mining from databases), Bilgi çıkarımı (Knowledge extraction), Verş ve örüntü analizi (Data/pattern analysis) gibi. Bunların arasındaki en popüler kullanım Veritabanlarındaki Bilgi Keşfi (Knowledge Discovery From Databases — KDD)’dir.
+    <h3>Bilgi keşfi</h3>
+    Alternatif olarak veri madenciliği aslında bilgi keşfi sürecinin bir parçası şeklinde kabul görmektedir. Bu adımlar;
+    <ul>
+      <li>Veri seçme (Yapılacak olan analiz ile ilgili olan verileri belirlemek)</li>
+      <li>Veri temizleme (Tutarsız verileri çıkarmak)</li>
+      <li>Veri bütünleştirme (Birçok veri kaynağını birleştirmek)</li>
+      <li>Veri dönüşümü (Verinin kullanılabilecek hale dönüşümünü gerçekleştirmek)</li>
+      <li>Veri madenciliği algoritmalarını uygulama (kümeleme, sınıflandırma, karar destek ağaçları)</li>
+      <li>Sonuçların değerlendirilmesi ve sunulması</li>
+    </ul>
+    Veri madenciliği adımı, kullanıcı ve bilgi tabanı ile etkileşim halindedir. İlginç örüntüler kullanıcıya gösterilir, ve istenirse bilgi tabanına kaydedilir. Buna göre, veri madenciliği işlemi, gizli kalmış örüntüler bulunana kadar devam eder. Bir veri madenciliği sistemi, aşağıdaki temel bileşenlere sahiptir:
+    <ul>
+      <li>Veritabanı, veri ambarı ve diğer depolama teknikleri</li>
+      <li>Veritabanı ya da veri ambarı sunucusu</li>
+      <li>Bilgi tabanı</li>
+      <li>Veri madenciliği motoru</li>
+      <li>Örüntü değerlendirme</li>
+      <li>Kullanıcı arayüzü</li>
+    </ul>
+    <h3>Hangi alanlarda kullanılır?</h3>
+    <ol>
+      <li>
+        <b>Pazarlama</b>
+        <ul>
+          <li>Müşterilerin satın alma alışkanlıklarının belirlenmesi</li>
+          <li>Müşterilerin demografik özellikleri arasındaki bağlantıların bulunması</li>
+          <li>Posta kamğanyalarında cevap verme oranının artırılması</li>
+          <li>Mevcut müşterilerin elde tutulması, yeni müşterilerin kazanılması</li>
+          <li>Pazar sepeti analizi (Market Basket Analysis)</li>
+          <li>Müşteri ilişkileri yönetimi</li>
+          <li>Müşteri değerlendirme</li>
+          <li>Satış tahmini</li>
+        </ul>
+      </li>
+      <li>
+        <b>Bankacılık</b>
+        <ul>
+          <li>Farklı finansal göstergeler arasında gizli korelasyonların bulunması</li>
+          <li>Kredi kartı dolandırıcılıklarının tespiti</li>
+          <li>Kredi kartı harcamalarına göre müşteri gruplarının belirlenmesi</li>
+          <li>Kredi taleplerinin değerlendirilmesi</li>
+        </ul>
+      </li>
+      <li>
+        <b>Sigortacılık</b>
+        <ul>
+          <li>Yeni poliçe talep edecek müşterilerin tahmin edilmesi</li>
+          <li>Sigorta dolandırıcılıklarının tespiti</li>
+          <li>Riskli müşteri örüntülerinin belirlenmesi</li>
+        </ul>
+      </li>
+    </ol>
+    <hr>
+    <h3>Veri madenciliği yöntemleri hakkında genel bilgiler</h3>
+    Veri madenciliği yöntemlerini denetimli ve denetimsiz olmak üzere iki ana kategoriye ayırmak mümkündür. Veri madenciliğinde iyi tanımlanmış veya kesin bir hedef olduğunda denetimli (supervised) ifadesi kullanılır. Elde edilmesi istenen sonuç için özel bir tanımlama yapılmamışsa veya belirsizlik söz konusu ise denetimsiz (unsupervised) ifadesi kullanılır.
+    <ul>
+      <li>Denetimsiz yöntemler daha çok veriyi anlamaya, tanımaya, keşfetmeye yönelik olarak kullanılan ve sonraki uygulanacak yöntemler için fikir vermeyi amaçlamaktadır.</li>
+      <li>Denetimli yöntemler ise veriden bilgi ve sonuç çıkarmaya yönelik kullanılmaktadır. Bu nedenle denetimsiz bir yöntemle elde edilen bir bilgi veya sonucu, eğer mümkünse denetimli bir yöntemle teyit etmek, elde edilen bulguların doğruluğu ve geçerliliği açısından önem taşımaktadır.</li>
+    </ul>
+    Kullanılan pek çok yöntemin yanına her geçen gün yeni yöntem ve algoritmalar eklenmektedir. Bunlardan bir kısmı onlarca yıldır kullanılan klasik teknikler diyebileceğimiz ağırlıklı olarak istatistiksel yöntemlerdir. Diğer yöntemler de genellikle istatistiği temel alan ama daha çok makine öğrenimi ve yapay zeka destekli yeni nesil yöntemlerdir. Veri madenciliğinde kullanılan klasik yöntemlerin bazıları bunlardır:
+    <ul>
+      <li>Regresyon analizi</li>
+      <li>K-En yakın komşuluk</li>
+      <li>K-Ortalamalar kümeleme analizi</li>
+      <li>Aşamalı (Hierarchical) kümeleme yöntemleri</li>
+      <li>Karar ağaçları</li>
+      <li>Sinir ağları</li>
+      <li>Birliktelik (ilişki) kuralları</li>
+      <li>Önemli bileşenler analizi</li>
+      <li>Diskriminant analizi</li>
+      <li>Kendi kendini düzenleyen haritalar</li>
+    </ul>
+  </p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./content.css">
+    <title>Derin Ogrenme</title>
+  </head>
+  <body>
+    <p>
+      Derin öğrenme bir makine öğrenme yöntemidir. Verilen bir veri kümesi ile
+      çıktıları tahmin edecek yapay zekayı eğitmemize olanak sağlar. Yapay
+      zekayı eğitmek için hem denetimli hem de denetimsiz öğrenme
+      kullanılabilir.
+      <h3>Yapay zeka ve makine öğrenmesi</h3>
+      Yapay zeka, bilgisayarın veya bilgisayar kontrolündeki bir robotun çeşitli
+      faaliyetleri zeki canlılara benzer şekilde yerine getirme kabileyitidir.
+      <br /><br />
+      Makine öğrenmesi, bir makinenin sert kodlanmış kurallar yerine büyük veri
+      setlerini kullanmayı öğrenmesini ifade eder. Bilgisayarların kendi
+      başlarına öğrenmelerini sağlar.
+      <h3>Denetimli öğrenme</h3>
+      Denetimli öğrenme, girdilere ve beklenen çıktılara sahip etiketli veri
+      setlerini kullanmayı içerir. Denetimli öğrenmeyi kullanarak bir Yapay Zeka
+      eğitirken, ona bir girdi verir ve beklenen çıktıyı söylersiniz. Yapay Zeka
+      tarafından üretilen çıktı yanlışsa, hesaplamalarını yeniden ayarlar. Bu
+      işlem, Yapay Zeka’nın hata oranını en aza indirene kadar veri seti
+      üzerinden tekrar tekrar yapılır.
+      <br /><br />
+      Örnek: Hava durumu belirleyici bir Yapay Zeka’dır. Geçmil verilerini
+      kullanarak hava durumunu tahmin etmeyi öğrenir. Bu eğitim verilerinde
+      girdiler (basınç, nem, rüzgar hızı) ve çıktılar (sıcaklık) bulunur.
+      <h3>Denetimsiz öğrenme</h3>
+      Denetimsiz öğrenme, belirli bir yapıya sahip olmayan veri kümelerini
+      kullanan makine öğreniminin görevidir. Denetlenmemiş öğrenmeyi kullanarak
+      bir Yapay Zeka’yı eğitirseniz, Yapay Zeka’ya verilerin mantıksal
+      sınıflandırmasını yapma izni verirsiniz.
+      <br /><br />
+      Örnek: Bir e-ticaret web sitesi için tahmin yapan yapay zeka örnek
+      verilebilir. Çünkü burada etiketli bir girdi ve çıktı veri seti
+      kullanılarak öğrenilmez. Bunun yerine girdi verileri kullanarak kendi
+      sınıflandırmasını oluşturacaktır. Hangi tür kullanıcıların daha fazla
+      farklı ürün alabileceklerini size söyleyecektir.
+      <br/><br/>
+      <hr>
+      <h3>Derin Öğrenme ile uçak bileti fiyat tahmini örneği</h3>
+      Uçak bileti fiyatlarını tahmin ederken, aşağıdaki girdileri kullanmak
+      istiyoruz diyelim (şuan için tek yön uçuşları düşünüyoruz):
+      <ul>
+        <li>Kalkış havalimanı</li>
+        <li>Varış havalimanı</li>
+        <li>Kalkış tarihi</li>
+        <li>Firma</li>
+      </ul>
+      Yapay sinir ağları (Neural Networks) tıpkı insan beyni gibi nöronlardan oluşur. Tüm nöronlar birbirine bağlıdır ve çıktıyı etkilemektedir.
+      <br/><br/>
+      Nöronlar 3 farklı katmana ayrılır:
+      <ul>
+        <li><b>Giriş katmanı</b>--Giriş verilerini alır. Bizim örneğimizde, giriş katmanında 4 nöron var: Kalkış havalimanı, Varış havalimanı, Kalkış tarihi ve Firma. Giriş katmanı, girişleri ilk gizli katmana gönderir.</li>
+        <li><b>Gizli katman(lar) </b>--Bu katmanlar girdilerimizde matematiksel hesaplamalar yapar. Yapay sinir ağları oluşturmadaki zorluklardan biri, her bir katman için nöronların sayısının yanı sıra gizli katmanların sayısına da karar vermektir. Derin öğrenmedeki “Derin”, birden fazla gizli katmana sahip olmayı ifade eder.</li>
+        <li><b>Çıkış katmanı </b>--Çıktı verilerini döndürür. Bizim örneğimizde, bize fiyat tahmini verir.</li>
+      </ul>
+      <h3>Peki fiyat tahmini nasıl yapılır?</h3>
+      Derin öğrenmenin başladığı yer burasıdır. Nöronlar arasındaki her bağlantı bir ağırlık (weight) ile ilişkilidir. Bu ağırlık, girdi değerinin önemini belirler. İlk ağırlıklar rastgele ayarlanır.
+      <br/><br/>
+      Bir uçak biletinin fiyatını tahmin ederken, en önemli (ağır) faktörlerden biri kalkış tarihidir. Bu nedenle, kalkış tarihi nöron bağlantıları büyük bir ağırlığa sahip olacak.
+      <h3>Yapay Sinir Ağını Eğitme</h3>
+      Derin öğrenmenin en zor kısımlarından biri yapay sinir ağını eğitmektir. Neden?
+      <ul>
+        <li>Büyük bir veri kümesine ihtiyaç var.</li>
+        <li>Çok fazla miktarda hesaplama gücüne ihtiyacımız var.</li>
+      </ul>
+      Uçak bileti fiyat tahmini uygulaması için, bilet fiyatlarının geçmiş verilerini bulmamız gerekiyor. Çok sayıda muhtemel havalimanı ve kalkış tarihi kombinasyonundan dolayı çok geniş bir bilet fiyatı listesine ihtiyacımız var. Yapay zekayı eğitmek için, veri kümemizdeki girdileri vermemiz ve çıktıları veri kümemizdeki çıktılarla karşılaştırmamız gerekir. Yapay zeka hala eğitimsiz olduğundan, çıktıları yanlış olacaktır. Tüm veri kümesini incelediğimizde, yapay zeka çıktılarının gerçek çıktılardan ne kadar yanlış olduğunu gösteren bir fonksiyon oluşturabiliriz. Bu fonksiyona “Maliyet fonksiyonu” denir.
+    </p>
+    <hr>
+    <h1>KAYNAKÇA</h1>
+    <div class="vl">
+     <a href="https://www.slideshare.net/eburhan/derin-renme-deep-learning-nedir">https://www.slideshare.net/eburhan/derin-renme-deep-learning-nedir</a>
+      <a href="https://www.derinogrenme.com/2017/03/04/yapay-sinir-aglari/">https://www.derinogrenme.com/2017/03/04/yapay-sinir-aglari/</a>
+    </div>
+  </body>
+</html>
