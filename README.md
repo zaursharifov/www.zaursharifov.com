@@ -1,6 +1,6 @@
 # Zaur Sharifov
 #### [☛ www.zaursharifov.com](http://zaursharifov.com)
-![]https://github.com/zeo404/www.zaursharifov.com/blob/main/assets/img/main/z-logo.png)
+![](https://github.com/zeo404/www.zaursharifov.com/blob/main/assets/img/main/z-logo.png)
 
 ## Technolohies Used
  - Html
