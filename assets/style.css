@@ -889,11 +889,14 @@ body::-webkit-scrollbar-thumb {
   width: 400px;
   height: 300px;
   margin: 10px 0;
+
 }
 .project-items .content {
   height: 100%;
   background-size: cover;
   transition: 5s all;
+  border: 2px solid #62cafd;
+  border-radius: 10px;
 }
 .project-items:hover .content {
   background-position: bottom;
