@@ -111,14 +111,14 @@ body::-webkit-scrollbar-thumb {
   height: 40%;
 }
 .h-buttons-container .h-btn {
-  border: 1px solid #62cafd;
+  border: 1px solid #fff;
   border-radius: 20px;
   text-align: center;
   width: 40%;
   padding: 7px 10px;
   margin: 0 10px;
   text-decoration: none;
-  color: #62cafd;
+  color: #fff;
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 25px;
@@ -895,7 +895,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   background-size: cover;
   transition: 5s all;
-  border: 2px solid #62cafd;
+  border: 1px solid #62cafd;
   border-radius: 10px;
 }
 .project-items:hover .content {
