@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./content.css">
+    <title>Git, Github, Gitlab</title>
+</head>
+
+<body>
+    <h3>Props Kullanimi</h3>
+    <img src="/blog/content/img/react1.png">
+    <p>
+        Message Componentimizin icine Your message h1 tagi aciriq, ve isteyirik ki ClassBased componentimizde
+        <Message /> ferqli mesajlar icersin bunun ucun title - props isledirik title icine Salam, Baki vs. yaziriq.
+        Sonra Message.js icinde hemin propsu isletmek ucun ilk once function icine props yaziriq ve title isledeceyimiz
+        yere js formatinda {} icine props.title cekirik.
+    </p>
+    <hr>
+    <h3>Props.children</h3>
+    <img src="/blog/content/img/react2.png">
+    <p>
+        <code>
+            ClassBased Componentinde <Message title="Salam">Elave Melumat</Message> title props olur Elave Melumat ise props.children. Message.js`de isletmek ucun <p>{props.children}</p> deye bilerik.
+        </code>
+    </p>
+    <hr>
+    <h3>State kullanimi</h3>
+    <p>
+        State Functional componentlerde isledile bilmir, ClassBased componentde isledilir. Hooks ile birlikde
+        Functional`da da istifade olunur.
+
+        Message.js - Functional
+
+        ClassBased.js - ClassBased
+    </p>
+    <img src="/blog/content/img/react3.png">
+    <p>
+        state ClassBassed component icinde isledilir ve bir nov databasedir. render ustunde state ={} yazilir ve icinde
+        car, model kimi bilgiler saxlanilir. Hemin component icerisinde istenilen yerde
+        [this.state.car](http://this.state.car) , this.state.model yazilaraq istifade olunur. Burda yazilan state
+        eslinde duzgun yazilis deyil amma Babel terefinden avtomatik asagidaki kimi ederek isleyir. Duzgun yazilis ise
+        asagidaki kimi olmalidir.
+    </p>
+    <img src="/blog/content/img/react4.png">
+    <hr>
+    <h3>Event Listeners</h3>
+    <img src="/blog/content/img/react5.png">
+    <p>
+        Burda onClick ozelliyini isledirik ve isteyirik ki button basildiginda make state`ini deyisek. Bunun ucun
+        carChangeHandler arrow funksiyasini yaradiriq ve onClick icine referans olaraq veririk. Funksiya icin state`i
+        deyismek ucun setState komutunu isledirik ve istediyimiz objecti deyisirik. make: Mercedes olur model ise oldugu
+        kimi qalir. Lakin bu react hooks ile biraz ferqli edilir.
+    </p>
+    <hr>
+    <h3>Ferqli componentde event listener isletmek</h3>
+    <img src="/blog/content/img/react6.png">
+    <p>
+        <code>
+            Car componenti yaradiriq ve icine Make ve Model deyismek ucun h2 taglari ve buton elave edirik. App icinde <Car make model> propslarini yaradir ve Appdaki state`imizden cagiririq. Car componentinde propslar ile make, modelimizi aliriq. Sonra carChangeHandler funksiyasini isletmek ucun App icindeki <Car changHandler={this.carChangeHandler}/> propsumuza gonderirik yeni funksiyamizi yeni bir props `title` ile diger componente gonderirik ve orda da props.changeHandler ile cekirik.
+        </code>
+    </p>
+    <hr>
+    <img src="/blog/content/img/react7.png">
+    <p>
+        <code>Burda <input> icine yazdigimiz text ile stateimizdeki make`i objectini deyiseceyik. Bunun ucun App icinde yeni funksiya yaradirig ve (event) yazaraq qarsi terefden almali oldugu event.target.value deyerini make`e bildiririk. inputumuza props vasitesi ile funksiyamizi gonderirik ve deyisiklik oldugunda event.target.value ile deyerimizi anliq olaraq deyisdire bilirik.</code>
+    </p>
+    <hr>
+    <h3>Conditional Rendering</h3>
+    <img src="/blog/content/img/react8.png">
+    <p>
+        Stateimize loggedIn = false objectini yazirin ve alta button qoyuruq ustunde yazan Welcome {this.state.loggedIn?
+        "zaur sharifov" : "Guest"} if methodudur. eger loggedIn true ise Zaur deyil ise Guest yazir. buttona
+        basdigimizda onclick eventinde funksiya yaradiriq ve setState imize loggedIn`in tersini yeni basdiqda true ise
+        false, false ise true olmagini teleb edirik. ve yazinida true olanda log out false olanda log in olaraq
+        deyisirik.
+    </p>
+    <hr>
+    <h3>Conditional rendering 3cu nov</h3>
+    <img src="/blog/content/img/react9.png">
+    <p>
+        Burda loggedIn kontrolu edilir kodlar sade gorunsun deye bu renderingden istifade etmek daha duzgun olur.
+        Render() icerisinde let controller duzeldirik ve defaultu signed out olur altda if statement qoyuruq ve loggedIn
+        true olduqda ise 2nci h1 etiketini yeni logged in`i gosterir. Bunlarin islemesi ucun tebiiki returnumuzde
+        {controller}`i cagiririq.
+    </p>
+    <hr>
+    <h3>Map, Key</h3>
+    <img src="/blog/content/img/react10.png">
+    <p>
+        Users adli state`imizde 1den cox elementimiz var ve biz bunlari h1 taglari icinde gostermek isteyirik. Bunun
+        ucun this.state.users.map deyerek map fonksiyonunu isledirik (element) bir
+        {name,job,id}`ye beraberdir. map`in return qismine de h1 tagimi acaraq element.name`i cagira bilirem. Key ise
+        bizim datamizin deyismesi zamani sifirdan render ederek performansi dusurmemeyi ucundur yeni key`e
+        element.id deyerek elementde deyisiklik etdikde id`ye gore hemen elementi deyisir ve sadece
+        onu tekrar render edir.
+    </p>
+</body>
+
+</html>
