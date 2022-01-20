@@ -11,7 +11,7 @@
 
 <body>
     <h3>Props Kullanimi</h3>
-    <img src="/blog/content/img/react1.png">
+    <img src="./img/react1.png">
     <p>
         Message Componentimizin icine Your message h1 tagi aciriq, ve isteyirik ki ClassBased componentimizde
         <Message /> ferqli mesajlar icersin bunun ucun title - props isledirik title icine Salam, Baki vs. yaziriq.
@@ -20,7 +20,7 @@
     </p>
     <hr>
     <h3>Props.children</h3>
-    <img src="/blog/content/img/react2.png">
+    <img src="./img/react2.png">
     <p>
         <code>
             ClassBased Componentinde <Message title="Salam">Elave Melumat</Message> title props olur Elave Melumat ise props.children. Message.js`de isletmek ucun <p>{props.children}</p> deye bilerik.
@@ -36,7 +36,7 @@
 
         ClassBased.js - ClassBased
     </p>
-    <img src="/blog/content/img/react3.png">
+    <img src="./img/react3.png">
     <p>
         state ClassBassed component icinde isledilir ve bir nov databasedir. render ustunde state ={} yazilir ve icinde
         car, model kimi bilgiler saxlanilir. Hemin component icerisinde istenilen yerde
@@ -44,10 +44,10 @@
         eslinde duzgun yazilis deyil amma Babel terefinden avtomatik asagidaki kimi ederek isleyir. Duzgun yazilis ise
         asagidaki kimi olmalidir.
     </p>
-    <img src="/blog/content/img/react4.png">
+    <img src="./img/react4.png">
     <hr>
     <h3>Event Listeners</h3>
-    <img src="/blog/content/img/react5.png">
+    <img src="./img/react5.png">
     <p>
         Burda onClick ozelliyini isledirik ve isteyirik ki button basildiginda make state`ini deyisek. Bunun ucun
         carChangeHandler arrow funksiyasini yaradiriq ve onClick icine referans olaraq veririk. Funksiya icin state`i
@@ -56,20 +56,20 @@
     </p>
     <hr>
     <h3>Ferqli componentde event listener isletmek</h3>
-    <img src="/blog/content/img/react6.png">
+    <img src="./img/react6.png">
     <p>
         <code>
             Car componenti yaradiriq ve icine Make ve Model deyismek ucun h2 taglari ve buton elave edirik. App icinde <Car make model> propslarini yaradir ve Appdaki state`imizden cagiririq. Car componentinde propslar ile make, modelimizi aliriq. Sonra carChangeHandler funksiyasini isletmek ucun App icindeki <Car changHandler={this.carChangeHandler}/> propsumuza gonderirik yeni funksiyamizi yeni bir props `title` ile diger componente gonderirik ve orda da props.changeHandler ile cekirik.
         </code>
     </p>
     <hr>
-    <img src="/blog/content/img/react7.png">
+    <img src="./img/react7.png">
     <p>
         <code>Burda <input> icine yazdigimiz text ile stateimizdeki make`i objectini deyiseceyik. Bunun ucun App icinde yeni funksiya yaradirig ve (event) yazaraq qarsi terefden almali oldugu event.target.value deyerini make`e bildiririk. inputumuza props vasitesi ile funksiyamizi gonderirik ve deyisiklik oldugunda event.target.value ile deyerimizi anliq olaraq deyisdire bilirik.</code>
     </p>
     <hr>
     <h3>Conditional Rendering</h3>
-    <img src="/blog/content/img/react8.png">
+    <img src="./img/react8.png">
     <p>
         Stateimize loggedIn = false objectini yazirin ve alta button qoyuruq ustunde yazan Welcome {this.state.loggedIn?
         "zaur sharifov" : "Guest"} if methodudur. eger loggedIn true ise Zaur deyil ise Guest yazir. buttona
@@ -79,7 +79,7 @@
     </p>
     <hr>
     <h3>Conditional rendering 3cu nov</h3>
-    <img src="/blog/content/img/react9.png">
+    <img src="./img/react9.png">
     <p>
         Burda loggedIn kontrolu edilir kodlar sade gorunsun deye bu renderingden istifade etmek daha duzgun olur.
         Render() icerisinde let controller duzeldirik ve defaultu signed out olur altda if statement qoyuruq ve loggedIn
@@ -88,7 +88,7 @@
     </p>
     <hr>
     <h3>Map, Key</h3>
-    <img src="/blog/content/img/react10.png">
+    <img src="./img/react10.png">
     <p>
         Users adli state`imizde 1den cox elementimiz var ve biz bunlari h1 taglari icinde gostermek isteyirik. Bunun
         ucun this.state.users.map deyerek map fonksiyonunu isledirik (element) bir
