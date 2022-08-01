@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [data, set_data] = useState(null);
+
+  fetch("./data.json")
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      set_data(data);
+    })
+    .catch(function (err) {
+      console.log(err, "fetch data error");
+    });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        {data
+          ? data.map((data, idx) => {
+              return (
+                <div>
+                  <img key={idx} src={data.home_photo} alt="a"></img>
+                  <p>{data.linkedin}</p>
+                  <p>{data.last_companies}</p>
+                </div>
+              );
+            })
+          : null}
+      </div>
     </div>
   );
 }
