@@ -1,8 +1,12 @@
-import Projects from "./components/Projects";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import "./style/app.scss";
+
 export default function App() {
   return (
-    <div>
-      <Projects />
+    <div className="container">
+      <Navbar />
+      <Sidebar />
     </div>
   );
 }

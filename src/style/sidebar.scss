@@ -1,0 +1,25 @@
+.cover {
+    width: 120px;
+    height: auto;
+    .sidebar {
+    width: 70px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: relative;
+    .line {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      display: block;
+      width: 1px;
+      height: 600px;
+      background-color: #535353;
+    }
+    .num {
+      margin-right: 30px;
+    }
+  }
+}
