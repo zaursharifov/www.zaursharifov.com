@@ -20,6 +20,7 @@
       background-color: #535353;
     }
     .btn {
+      width: auto;
       margin-left: 40px;
       font-family: "Montserrat";
       font-size: 14px;
@@ -28,6 +29,7 @@
       background-color: transparent;
       color: #ffffff;
       position: relative;
+      cursor: pointer;
       .dot {
         font-size: 30px;
         position: absolute;
@@ -37,8 +39,8 @@
         color: #0f33ff;
       }
       .num {
+        pointer-events: none;
         color: #4a4a4a;
-        cursor: pointer;
       }
     }
   }

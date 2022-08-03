@@ -8,6 +8,7 @@ export default function ButtonGroup({ buttons, doSomething }) {
     set_clickedId(id);
     doSomething(event);
   }
+
   return (
     <>
       {buttons.map((buttonLabel, i) => (
@@ -17,13 +18,13 @@ export default function ButtonGroup({ buttons, doSomething }) {
           onClick={(event) => handleClick(event, i)}
           className={"btn"}
         >
-          {i === clickedId ? (
+          {i !== clickedId ? (
+            <span className="num">{i}</span>
+          ) : (
             <>
               <span className="dot">•</span>
               {buttonLabel}
             </>
-          ) : (
-            <span className="num">{i}</span>
           )}
         </button>
       ))}
