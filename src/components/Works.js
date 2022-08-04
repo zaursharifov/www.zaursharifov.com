@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Projects() {
+export default function Works() {
   const [data, set_data] = useState(null);
 
   fetch("./projects.json")

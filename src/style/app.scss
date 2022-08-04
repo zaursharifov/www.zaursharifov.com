@@ -17,6 +17,15 @@ body {
     max-width: 1440px;
     height: 100%;
     margin: 0 auto;
+    position: relative;
+    .content {
+      border: 1px solid green;
+      width: calc(100% - 120px);
+      height: calc(100% - 150px);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
   .cursor {
     width: 20px;
