@@ -29,7 +29,6 @@
       background-color: transparent;
       color: #ffffff;
       position: relative;
-      // cursor: pointer;
       .dot {
         font-size: 30px;
         position: absolute;
@@ -40,7 +39,6 @@
       }
       .num {
         pointer-events: none;
-        color: #4a4a4a;
       }
     }
   }

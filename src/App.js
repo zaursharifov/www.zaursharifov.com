@@ -11,9 +11,6 @@ export default function App() {
       <div className="container">
         <Navbar />
         <Sidebar />
-
-        <a href="/">Tikla</a>
-        <button>BTN TUKLA</button>
       </div>
     </>
   );
