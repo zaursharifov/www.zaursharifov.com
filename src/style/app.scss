@@ -1,6 +1,14 @@
+html,
+body {
+  cursor: none;
+}
+html *,
+body * {
+  cursor: none;
+}
 body {
   background-color: #0c0c0c;
-    color: #FFFFFF;
+  color: #ffffff;
   .container {
     max-width: 1440px;
     height: 100%;

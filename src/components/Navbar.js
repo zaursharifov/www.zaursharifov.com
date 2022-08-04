@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/navbar.scss";
+
 export default function Navbar() {
   const [isActive, set_isActive] = useState(false);
   return (
