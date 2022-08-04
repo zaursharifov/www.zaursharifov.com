@@ -3,7 +3,8 @@
 <!-- <img src="https://github.com/zeo404/www.zaursharifov.com/blob/main/assets/img/main/z-logo.png" width="200" height="200"/> -->
 
 ## Technolohies Used
-
+React js
+Scss
 
 ## License
 [MIT](https://github.com/zeo404/www.zaursharifov.com/blob/main/LICENSE)
