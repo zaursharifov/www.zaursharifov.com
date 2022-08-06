@@ -14,7 +14,33 @@
 //   },
 
 import React from "react";
+import "../style/home.scss";
 
 export default function Home() {
-  return <div>Home SAYFASI</div>;
+  return (
+    <div className="home">
+      <div className="top">
+        <div>
+          <h1>Your next interactive experience</h1>
+          <button onClick={()=> {console.log("tiklandi")}}>CONTACT ME <span>↗</span></button>
+        </div>
+        <img src="./about/home.png" alt="nse" />
+      </div>
+      <div className="line"></div>
+      <div className="bottom">
+        <div className="b_section">
+          <h2>Front end development</h2>
+          <p>HTML5 / CSS / Javascript / React JS</p>
+        </div>
+        <div className="b_section">
+          <h2>Back end development</h2>
+          <p>Node js / Mongo DB / MySql</p>
+        </div>
+        <div className="b_section">
+          <h2>Mobile development</h2>
+          <p>React Native</p>
+        </div>
+      </div>
+    </div>
+  );
 }
