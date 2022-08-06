@@ -6,6 +6,14 @@
 React js
 Scss
 
+Color palette: 
+background - #0c0c0c;
+buttons, shapes, dots - #0F33FF;
+lines - #535353;
+texts - #ffffff, #272727;
+
+css space content code - \00a0
+
 ## License
 [MIT](https://github.com/zeo404/www.zaursharifov.com/blob/main/LICENSE)
 Copyright (c) 2021  Zaur Sharifov

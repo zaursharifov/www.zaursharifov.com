@@ -13,6 +13,7 @@
       font-size: 68px;
       font-weight: 900;
       line-height: 68px;
+      margin-bottom: 90px;
     }
     button {
       background-color: transparent;
@@ -22,9 +23,14 @@
       font-weight: 700;
       line-height: 22.4px;
       padding: 5px 15px;
-      mix-blend-mode: exclusion;
       span {
+        font-size: 20px;
         margin-left: 10px;
+        color: #0F33FF;
+      }
+      &:hover{
+        transition: background-color 300ms ease-in-out;
+        background-color: #0c0c0c;
       }
     }
     img {
@@ -38,6 +44,15 @@
     height: 1px;
     background-color: #535353;
     margin-bottom: 15px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "\00a0";
+      height: 3px;
+      width: 40px;
+      background-color: #0F33FF;
+      left: 1%;
+    }
   }
 
   .bottom {

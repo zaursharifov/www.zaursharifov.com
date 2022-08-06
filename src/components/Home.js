@@ -21,10 +21,16 @@ export default function Home() {
     <div className="home">
       <div className="top">
         <div>
-          <h1>Your next interactive experience</h1>
-          <button onClick={()=> {console.log("tiklandi")}}>CONTACT ME <span>↗</span></button>
+          <h1>Creative websites for your brand</h1>
+          <button
+            onClick={() => {
+              console.log("tiklandi");
+            }}
+          >
+            CONTACT ME <span>↗</span>
+          </button>
         </div>
-        <img src="./about/home.png" alt="nse" />
+        <img src="./about/home.png" alt="home_png" />
       </div>
       <div className="line"></div>
       <div className="bottom">
