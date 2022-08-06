@@ -15,13 +15,15 @@ export default function App() {
   function changeComponent(event) {
     set_component(event.target.name);
   }
+
   return (
     <>
-      <Cursor />
+      <Cursor changeComponent={changeComponent} />
 
       <div className="container">
         <Navbar />
         <Sidebar changeComponent={changeComponent} />
+
         <div className="content">{component === "Home" ? <Home /> : ""}</div>
         <div className="content">{component === "Works" ? <Works /> : ""}</div>
         <div className="content">{component === "About" ? <About /> : ""}</div>

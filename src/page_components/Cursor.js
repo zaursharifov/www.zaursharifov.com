@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../style/app.scss";
 
-export default function Cursor() {
+export default function Cursor({changeComponent}) {
   const [position, set_position] = useState({ x: 0, y: 0 });
   const [hidden, set_hidden] = useState(false);
   const [click, set_click] = useState(false);
@@ -51,7 +51,7 @@ export default function Cursor() {
     addLinkEvents();
     addEventListener();
     return () => removeEventListener();
-  }, []);
+  }, [changeComponent]);
   return (
     <div
       className={`cursor ${hidden ? "c_hidden" : ""} ${
