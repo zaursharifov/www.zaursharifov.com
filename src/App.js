@@ -30,7 +30,7 @@ export default function App() {
         <div className="content">
           {component === "Galery" ? <Galery /> : ""}
         </div>
-        <div className="content">
+        <div className="content" style={{zIndex: "-1"}}>
           {component === "Contact" ? <Contact /> : ""}
         </div>
       </div>

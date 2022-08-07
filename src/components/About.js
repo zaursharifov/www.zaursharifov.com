@@ -18,11 +18,11 @@ export default function About() {
         <img src="./about/home.png" alt="home_png" />
       </div>
       <div className="bottom">
-        <img src="./about/bitsody.jpg" alt="bitsody" />
-        <img src="./about/buta.jpg" alt="buta" />
-        <img src="./about/fiverr.jpg" alt="fiverr" />
-        <img src="./about/utest.png" alt="utest" />
-        <img src="./about/appen.jpg" alt="appen" />
+        <img src="./about/companies/bitsody.jpg" alt="bitsody" />
+        <img src="./about/companies/buta.jpg" alt="buta" />
+        <img src="./about/companies/fiverr.jpg" alt="fiverr" />
+        <img src="./about/companies/utest.png" alt="utest" />
+        <img src="./about/companies/appen.jpg" alt="appen" />
       </div>
     </div>
   );
