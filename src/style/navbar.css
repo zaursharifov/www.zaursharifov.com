@@ -7,44 +7,46 @@
   align-items: flex-start;
   padding: 30px 0;
 }
-.navbar .logo {
+.logo {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
 }
-.navbar .menu_wrapper {
+.menu_wrapper {
   width: 25px;
   height: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
   transform-origin: transform 330ms ease-out;
 }
-.navbar .menu_wrapper.open {
+.menu_wrapper.open {
   transform: rotate(-45deg);
 }
-.navbar .line_menu {
-  background-color: #FFFFFF;
+.line_menu {
+  background-color: #ffffff;
   border-radius: 2px;
   width: 100%;
   height: 3px;
 }
-.navbar .line_menu.half {
+.line_menu.half {
   width: 50%;
 }
-.navbar .line_menu.start {
+.line_menu.start {
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: right;
 }
-.navbar .open .line_menu.start {
+.open .line_menu.start {
   transform: rotate(-90deg) translateX(3px);
 }
-.navbar .line_menu.end {
+.line_menu.end {
   align-self: flex-end;
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: left;
 }
-.navbar .open .line_menu.end {
+
+.open .line_menu.end {
   transform: rotate(-90deg) translateX(-3px);
-}/*# sourceMappingURL=navbar.css.map */
+}

@@ -1,0 +1,51 @@
+html,
+body {
+  cursor: none;
+}
+html *,
+body * {
+  cursor: none;
+}
+a,
+button {
+  mix-blend-mode: exclusion;
+}
+body {
+  background-color: #0c0c0c;
+  color: #ffffff;
+}
+.container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  border: 1px solid green;
+  width: calc(100% - 120px);
+  height: calc(100% - 150px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: all 100ms ease;
+  transition-property: opacity, background-color, transform;
+}
+.c_hidden {
+  opacity: 0;
+}
+.c_click {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: transparent;
+}
+.c_hover {
+  transform: translate(-50%, -50%) scale(4);
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../style/app.scss";
+import "../style/app.css";
+
 
 export default function Cursor({changeComponent}) {
   const [position, set_position] = useState({ x: 0, y: 0 });

@@ -5,6 +5,7 @@
 ## Technolohies Used
 React js
 Scss
+Material ui icons
 
 Color palette: 
 background - #0c0c0c;

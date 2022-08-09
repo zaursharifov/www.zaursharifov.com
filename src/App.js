@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Cursor from "./page_components/Cursor";
@@ -7,7 +7,7 @@ import Works from "./components/Works";
 import About from "./components/About";
 import Galery from "./components/Galery";
 import Contact from "./components/Contact";
-import "./style/app.scss";
+import "./style/app.css";
 
 export default function App() {
   const [component, set_component] = useState("Home");
@@ -30,7 +30,7 @@ export default function App() {
         <div className="content">
           {component === "Galery" ? <Galery /> : ""}
         </div>
-        <div className="content">
+        <div className="content" style={{zIndex: "-1"}}>
           {component === "Contact" ? <Contact /> : ""}
         </div>
       </div>

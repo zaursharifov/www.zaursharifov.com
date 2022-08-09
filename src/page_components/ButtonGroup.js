@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "../style/sidebar.scss";
+import React, { useState } from "react";
+import "../style/sidebar.css";
 
 export default function ButtonGroup({ buttons, doSomething }) {
   const [clickedId, set_clickedId] = useState(0);

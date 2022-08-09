@@ -3,7 +3,7 @@
   width: 120px;
   height: auto;
 }
-.cover .sidebar {
+.sidebar {
   width: 70px;
   height: 600px;
   display: flex;
@@ -12,7 +12,7 @@
   align-items: flex-start;
   position: relative;
 }
-.cover .sidebar .line {
+.s_line {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -21,6 +21,26 @@
   height: 600px;
   background-color: #535353;
 }
-.cover .sidebar .num {
-  margin-right: 30px;
-}/*# sourceMappingURL=sidebar.css.map */
+.btn {
+  width: auto;
+  margin-left: 40px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  position: relative;
+}
+
+.dot {
+  font-size: 30px;
+  position: absolute;
+  right: 88%;
+  top: 55%;
+  transform: translate(-88%, -55%);
+  color: #0f33ff;
+}
+.num {
+  pointer-events: none;
+}
