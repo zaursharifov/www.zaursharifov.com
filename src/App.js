@@ -22,10 +22,7 @@ export default function App() {
 
       <div className="container">
         <Navbar />
-        <Sidebar
-          changeComponent={changeComponent}
-          component={component}
-        />
+        <Sidebar changeComponent={changeComponent} component={component} />
 
         <div className="content">
           {component === "Home" ? <Home set_component={set_component} /> : ""}
@@ -35,7 +32,7 @@ export default function App() {
         <div className="content">
           {component === "Galery" ? <Galery /> : ""}
         </div>
-        <div className="content" style={{ zIndex: "-1" }}>
+        <div className="content">
           {component === "Contact" ? <Contact /> : ""}
         </div>
       </div>
