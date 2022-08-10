@@ -1,7 +1,6 @@
 import React from "react";
 import "../style/contact.css";
 
-
 export default function Contact() {
   return (
     <div className="contact">
@@ -18,7 +17,10 @@ export default function Contact() {
         <a className="c_btn" href="https://www.instagram.com/zeraphosa/">
           instagram
         </a>
-        <a className="c_btn" href="https://www.linkedin.com/in/zaursharifov-404/">
+        <a
+          className="c_btn"
+          href="https://www.linkedin.com/in/zaursharifov-404/"
+        >
           linkedin
         </a>
         <a className="c_btn" href="https://github.com/zeraphosa">
@@ -28,4 +30,3 @@ export default function Contact() {
     </div>
   );
 }
-

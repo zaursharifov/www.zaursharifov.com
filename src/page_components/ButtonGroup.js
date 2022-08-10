@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/sidebar.css";
 
-export default function ButtonGroup({ buttons, doSomething }) {
+export default function ButtonGroup({ buttons, doSomething, component }) {
   const [clickedId, set_clickedId] = useState(0);
 
   function handleClick(event, id) {
     set_clickedId(id);
     doSomething(event);
   }
+  useEffect(() => {
+    if (component === "Contact") {
+      set_clickedId(4);
+    }
+  }, [component]);
 
   return (
     <>

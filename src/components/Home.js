@@ -1,15 +1,17 @@
 import React from "react";
 import "../style/home.css";
 
-export default function Home() {
+export default function Home({ set_component }) {
+  
   return (
     <div className="home">
       <div className="top">
         <div>
           <h1 className="h_h1">Creative websites for your brand</h1>
-          <button className="h_btn"
+          <button
+            className="h_btn"
             onClick={() => {
-              console.log("tiklandi");
+              set_component("Contact");
             }}
           >
             CONTACT ME <span>↗</span>

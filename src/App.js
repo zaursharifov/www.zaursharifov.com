@@ -22,15 +22,20 @@ export default function App() {
 
       <div className="container">
         <Navbar />
-        <Sidebar changeComponent={changeComponent} />
+        <Sidebar
+          changeComponent={changeComponent}
+          component={component}
+        />
 
-        <div className="content">{component === "Home" ? <Home /> : ""}</div>
+        <div className="content">
+          {component === "Home" ? <Home set_component={set_component} /> : ""}
+        </div>
         <div className="content">{component === "Works" ? <Works /> : ""}</div>
         <div className="content">{component === "About" ? <About /> : ""}</div>
         <div className="content">
           {component === "Galery" ? <Galery /> : ""}
         </div>
-        <div className="content" style={{zIndex: "-1"}}>
+        <div className="content" style={{ zIndex: "-1" }}>
           {component === "Contact" ? <Contact /> : ""}
         </div>
       </div>

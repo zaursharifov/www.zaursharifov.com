@@ -2,8 +2,7 @@ import React from "react";
 import ButtonGroup from "../page_components/ButtonGroup";
 import "../style/sidebar.css";
 
-
-export default function Sidebar({ changeComponent }) {
+export default function Sidebar({ changeComponent, component }) {
   return (
     <div className="cover">
       <div className="sidebar">
@@ -11,6 +10,7 @@ export default function Sidebar({ changeComponent }) {
         <ButtonGroup
           buttons={["Home", "Works", "About", "Galery", "Contact"]}
           doSomething={changeComponent}
+          component={component}
         />
       </div>
     </div>
