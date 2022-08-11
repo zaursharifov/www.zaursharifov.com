@@ -1,14 +1,21 @@
 import React from "react";
 import "../style/contact.css";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Contact() {
   return (
     <>
-      <img className="pin" src="./about/maps/pin.png" alt="pin" />
+      <img className="pin" src="./about/maps/circle.png" alt="pin" />
       <div className="contact"></div>
       <div className="card">
         <div className="c_txt_container">
-          <button className="c_txt">zaur.sharifov@outlook.com</button>
+          <button className="c_txt">
+            <a href="mailto:zaur.sharifov@outlook.com" rel="noreferrer">
+              zaur.sharifov@outlook.com
+            </a>
+          </button>
           <button
             className="c_txt"
             onClick={() => {
@@ -34,7 +41,7 @@ export default function Contact() {
               window.open("https://www.instagram.com/zeraphosa/");
             }}
           >
-            instagram
+            <InstagramIcon className="icon" />
           </button>
           <button
             className="c_btn"
@@ -42,7 +49,7 @@ export default function Contact() {
               window.open("https://www.linkedin.com/in/zaursharifov-404/");
             }}
           >
-            linkedin
+            <LinkedInIcon className="icon" />
           </button>
           <button
             className="c_btn"
@@ -50,7 +57,7 @@ export default function Contact() {
               window.open("https://github.com/zeraphosa");
             }}
           >
-            github
+            <GitHubIcon className="icon"/>
           </button>
         </div>
       </div>

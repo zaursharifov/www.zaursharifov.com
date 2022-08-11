@@ -17,8 +17,8 @@
   width: 100px;
   height: 60px;
   left: 35%;
-  top: 40%;
-  transform: translate(-35%, -40%);
+  top: 49%;
+  transform: translate(-35%, -49%);
 }
 
 .card {
@@ -56,18 +56,22 @@
   font-weight: 700;
   line-height: 22.4px;
   color: #ffffff;
-  background-color: #0C0B0C;
+  background-color: #0c0b0c;
   border: none;
+}
+.c_txt > a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .c_btn {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22.4px;
-
   background-color: #000000;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
+  border-radius: 5px;
 }
