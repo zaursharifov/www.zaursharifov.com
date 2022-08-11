@@ -10,9 +10,9 @@ export default function About() {
           <a
             href="./about/cv_zaursharifov.pdf"
             target={"_blank"}
-            className="h_btn"
+            className="a_btn"
           >
-            RESUME <span>↗</span>
+            RESUME →
           </a>
         </div>
         <img className="h_img" src="./about/home.png" alt="home_png" />

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import Cursor from "./page_components/Cursor";
 import Home from "./components/Home";
 import Works from "./components/Works";
 import About from "./components/About";
@@ -17,25 +16,19 @@ export default function App() {
   }
 
   return (
-    <>
-      <Cursor changeComponent={changeComponent} />
+    <div className="container">
+      <Navbar />
+      <Sidebar changeComponent={changeComponent} component={component} />
 
-      <div className="container">
-        <Navbar />
-        <Sidebar changeComponent={changeComponent} component={component} />
-
-        <div className="content">
-          {component === "Home" ? <Home set_component={set_component} /> : ""}
-        </div>
-        <div className="content">{component === "Works" ? <Works /> : ""}</div>
-        <div className="content">{component === "About" ? <About /> : ""}</div>
-        <div className="content">
-          {component === "Galery" ? <Galery /> : ""}
-        </div>
-        <div className="content">
-          {component === "Contact" ? <Contact /> : ""}
-        </div>
+      <div className="content">
+        {component === "Home" ? <Home set_component={set_component} /> : ""}
       </div>
-    </>
+      <div className="content">{component === "Works" ? <Works /> : ""}</div>
+      <div className="content">{component === "About" ? <About /> : ""}</div>
+      <div className="content">{component === "Galery" ? <Galery /> : ""}</div>
+      <div className="content">
+        {component === "Contact" ? <Contact /> : ""}
+      </div>
+    </div>
   );
 }

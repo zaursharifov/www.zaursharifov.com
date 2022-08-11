@@ -26,16 +26,24 @@
   font-weight: 700;
   line-height: 22.4px;
   padding: 5px 15px;
+  cursor: pointer;
+  position: relative;
 }
-.h_btn > span {
-  font-size: 20px;
-  margin-left: 10px;
-  color: #0f33ff;
+.h_btn::after {
+  z-index: -1;
+  position: absolute;
+  content: "\00a0";
+  background-color: #0f33ff;
+  width: 80px;
+  padding: 5px 15px;
+  top: 0;
+  right: 0;
 }
-.h_btn:hover {
-  transition: background-color 300ms ease-in-out;
-  background-color: #0c0c0c;
+.h_btn:hover::after {
+  width: 110px;
+  transition: all 300ms ease-in-out;
 }
+
 .h_img {
   width: 400px;
   height: 400px;
@@ -82,7 +90,6 @@
   line-height: 22.4px;
 }
 
-
 .a_bottom {
   z-index: -1;
   display: flex;
@@ -95,4 +102,30 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+.a_btn {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  position: relative;
+}
+.a_btn::after {
+  z-index: -1;
+  position: absolute;
+  content: "\00a0";
+  background-color: #0f33ff;
+  width: 50px;
+  padding: 5px 15px;
+  top: 0;
+  right: 0;
+}
+.a_btn:hover::after {
+  width: 80px;
+  transition: all 300ms ease-in-out;
 }

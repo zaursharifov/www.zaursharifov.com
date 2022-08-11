@@ -2,7 +2,7 @@ import React from "react";
 import "../style/contact.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Contact() {
   return (
@@ -41,7 +41,7 @@ export default function Contact() {
               window.open("https://www.instagram.com/zeraphosa/");
             }}
           >
-            <InstagramIcon className="icon" />
+            <InstagramIcon />
           </button>
           <button
             className="c_btn"
@@ -49,7 +49,7 @@ export default function Contact() {
               window.open("https://www.linkedin.com/in/zaursharifov-404/");
             }}
           >
-            <LinkedInIcon className="icon" />
+            <LinkedInIcon />
           </button>
           <button
             className="c_btn"
@@ -57,7 +57,7 @@ export default function Contact() {
               window.open("https://github.com/zeraphosa");
             }}
           >
-            <GitHubIcon className="icon"/>
+            <GitHubIcon />
           </button>
         </div>
       </div>

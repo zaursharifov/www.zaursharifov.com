@@ -1,0 +1,24 @@
+/* .works{
+  z-index: 1;
+  position: relative;
+}
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+  background-color: blue;
+}
+.inner_carousel {
+  display: flex;
+  background-color: lightblue;
+}
+.work_item {
+  min-height: 40rem;
+  min-width: 30rem;
+  padding: 40px;
+}
+.work_item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  pointer-events: none;
+} */

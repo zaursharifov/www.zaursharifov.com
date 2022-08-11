@@ -14,7 +14,7 @@ export default function Home({ set_component }) {
               set_component("Contact");
             }}
           >
-            CONTACT ME <span>↗</span>
+            CONTACT ME →
           </button>
         </div>
         <img className="h_img" src="./about/home.png" alt="home_png" />

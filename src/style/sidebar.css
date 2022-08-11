@@ -31,6 +31,7 @@
   background-color: transparent;
   color: #ffffff;
   position: relative;
+  cursor: pointer;
 }
 
 .dot {
