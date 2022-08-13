@@ -1,9 +1,62 @@
-import w0 from "./assets/works/old_portfolio_0.png";
+import w0 from "./assets/works/gerdabutter.png";
 import w1 from "./assets/works/old_portfolio_1.png";
+import w2 from "./assets/works/buta_project2.png";
+import w3 from "./assets/works/old_portfolio_0.png";
+import w4 from "./assets/works/zerapanel.png";
+import w5 from "./assets/works/turaz.png";
+import w6 from "./assets/works/atiktespit.png";
 
 const data = [
-  { i: w0, l: "link0", g: "git0" },
-  { i: w1, l: "link1", g: "git1" },
+  {
+    i: w0,
+    l: "https://gerdabutter.com",
+    g: null,
+    a: "Gerda Butter",
+    c: "web",
+  },
+
+  {
+    i: w1,
+    l: "https://zeraphosa-templates.netlify.app/old_portfolio_1/index.html",
+    g: "https://github.com/zeraphosa1/templates/tree/main/old_portfolio_1",
+    a: "Old portfolio",
+    c: "web",
+  },
+  {
+    i: w2,
+    l: "https://zeraphosa-butagrup.netlify.app/assignment_2/index.html",
+    g: "https://github.com/zeraphosa1/buta_grup/tree/main/assignment_2",
+    a: "Buta Grup assignment",
+    c: "web",
+  },
+  {
+    i: w3,
+    l: "https://zeraphosa-templates.netlify.app/old_portfolio_0/index.html",
+    g: "https://github.com/zeraphosa1/templates/tree/main/old_portfolio_0",
+    a: "Old portfolio",
+    c: "web",
+  },
+  {
+    i: w4,
+    l: null,
+    g: null,
+    a: "Admin panel example",
+    c: "web",
+  },
+  {
+    i: w5,
+    l: "https://turaz.bitsody.com",
+    g: null,
+    a: "Turaz dictianory by Bitsody",
+    c: "mob",
+  },
+  {
+    i: w6,
+    l: null,
+    g: "https://github.com/zeraphosa/atik_tespit_sistemi",
+    a: "Atık Tespit Sistemi",
+    c: "mob",
+  },
 ];
 
 export default data;

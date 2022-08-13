@@ -51,11 +51,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
 }
 .w_btns > a {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
+}
+.w_btns > a:hover {
+  color: #0f33ff;
+  transition: color 500ms;
+}
+.w_btns h2{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
 }

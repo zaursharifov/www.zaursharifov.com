@@ -11,13 +11,14 @@
   transform: scale(1.03, 1.1);
 }
 .pin {
-  z-index: 1;
+  z-index: 5;
   position: absolute;
   width: 100px;
   height: 60px;
   left: 35%;
   top: 49%;
   transform: translate(-35%, -49%);
+  filter: brightness(50%);
 }
 
 .card {

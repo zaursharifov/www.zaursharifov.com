@@ -29,12 +29,15 @@ export default function Works() {
               return (
                 <motion.div key={index} className="w_item">
                   <div
+                    onDoubleClick={() => {
+                      window.open(`${item.g}`);
+                    }}
                     className="w_image"
                     style={{ backgroundImage: `url(${item.i})` }}
                   />
                   <div className="w_btns">
-                    <a href={item.l}>Live →</a>
-                    <a href={item.g}>Github →</a>
+                    <h2>{item.a}</h2>
+                    <a href={item.l}>→</a>
                   </div>
                 </motion.div>
               );

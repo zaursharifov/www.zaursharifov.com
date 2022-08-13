@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <>
       <img className="pin" src="./about/maps/circle.png" alt="pin" />
-      <div className="contact"></div>
+      <div className="contact" />
       <div className="card">
         <div className="c_txt_container">
           <button className="c_txt">
