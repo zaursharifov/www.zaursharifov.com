@@ -7,9 +7,31 @@
   font-family: "Montserrat";
 }
 .works_header {
-  width: 100%;
+  z-index: 1;
+  width: auto;
   height: 30px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 30px;
+}
+.works_header > button {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+.works_header > button:hover {
+  color: #0f33ff;
+  transition: color 500ms;
+}
+.active {
+  color: #0f33ff;
 }
 .works_slider {
   margin-top: 10px;
@@ -62,7 +84,7 @@
   color: #0f33ff;
   transition: color 500ms;
 }
-.w_btns h2{
+.w_btns h2 {
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
