@@ -1,17 +1,39 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../style/works.css";
 import data from "../works";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Works() {
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
+  const scrollRef = useRef();
+  const el = scrollRef.current;
 
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
       return newVal.c === curcat;
     });
+    el.scrollTo({
+      left: 0,
+      behavior: "smooth",
+    });
     set_arr(newItem);
   }
+
+  function leftHandle() {
+    el.scrollTo({
+      left: el.scrollLeft - 200,
+      behavior: "smooth",
+    });
+  }
+  function rightHandle() {
+    el.scrollTo({
+      left: el.scrollLeft + 200,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="works">
       <div className="works_header">
@@ -30,7 +52,10 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
-        <div className="slider_inner">
+        <button className="arrow_btn" onClick={leftHandle}>
+          <ArrowBackIosIcon />
+        </button>
+        <div className="slider_inner" ref={scrollRef}>
           {arr.map((item, index) => {
             return (
               <div key={index} className="w_item">
@@ -41,14 +66,22 @@ export default function Works() {
                   className="w_image"
                   style={{ backgroundImage: `url(${item.i})` }}
                 />
-                <div className="w_btns">
+                <button
+                  onClick={() => {
+                    window.open(item.l);
+                  }}
+                  className="w_btns"
+                >
                   <h2>{item.a}</h2>
-                  <a href={item.l}>→</a>
-                </div>
+                  <p>→</p>
+                </button>
               </div>
             );
           })}
         </div>
+        <button className="arrow_btn" onClick={rightHandle}>
+          <ArrowForwardIosIcon />
+        </button>
       </div>
     </div>
   );
