@@ -5,6 +5,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Works() {
+  const [selected, set_selected] = useState("all");
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
   const scrollRef = useRef();
@@ -14,11 +15,12 @@ export default function Works() {
     const newItem = data.filter((newVal) => {
       return newVal.c === curcat;
     });
+    set_arr(newItem);
+    set_selected(curcat);
     el.scrollTo({
       left: 0,
       behavior: "smooth",
     });
-    set_arr(newItem);
   }
 
   function leftHandle() {
@@ -37,12 +39,21 @@ export default function Works() {
   return (
     <div className="works">
       <div className="works_header">
-        <button onClick={() => set_arr(data)}>All</button>
+        <button
+          onClick={() => {
+            set_arr(data);
+            set_selected("all");
+          }}
+          className={selected === "all" ? "active" : ""}
+        >
+          All
+        </button>
         {items.map((val, id) => {
           return (
             <button
               key={id}
-              onClick={(e) => {
+              className={selected === val ? "active" : ""}
+              onClick={() => {
                 filterItem(val);
               }}
             >
