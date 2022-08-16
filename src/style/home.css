@@ -113,19 +113,53 @@
   line-height: 22.4px;
   padding: 5px 15px;
   cursor: pointer;
-  position: relative;
 }
-.a_btn::after {
-  z-index: -1;
-  position: absolute;
-  content: "\00a0";
-  background-color: #0f33ff;
-  width: 50px;
-  padding: 5px 15px;
-  top: 0;
-  right: 0;
-}
-.a_btn:hover::after {
-  width: 80px;
+.a_btn:hover .span {
+  margin-left: 10px;
   transition: all 300ms ease-in-out;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #0f33ff;
+  border-radius: 50%;
+  background-color: #0f33ff;
+  position: absolute;
+  top: 24%;
+  left: 27%;
+  transform: translate(-43%, -31%);
+}
+.square {
+  transform: rotate(320deg);
+  width: 10px;
+  height: 10px;
+  border: 1px solid #0f33ff;
+  background-color: #0f33ff;
+  position: absolute;
+  top: 10%;
+  left: 52%;
+}
+.square2 {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #0f33ff;
+  background-color: #0f33ff;
+  position: absolute;
+  top: 31%;
+  left: 43%;
+}
+.triangle {
+  transform: rotate(290deg);
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-right: solid 8px #0f33ff;
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  box-sizing: border-box;
 }
