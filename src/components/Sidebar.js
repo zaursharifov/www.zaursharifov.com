@@ -8,7 +8,7 @@ export default function Sidebar({ changeComponent, component }) {
       <div className="sidebar">
         <span className="s_line"></span>
         <ButtonGroup
-          buttons={["Home", "Works", "About", "Galery", "Contact"]}
+          buttons={["Home", "Works", "About", "Contact"]}
           doSomething={changeComponent}
           component={component}
         />

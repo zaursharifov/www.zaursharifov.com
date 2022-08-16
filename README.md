@@ -2,43 +2,25 @@
 
 #### [☛ www.zaursharifov.com](http://zaursharifov.com)
 
-<!-- <img src="https://github.com/zeo404/www.zaursharifov.com/blob/main/assets/img/main/z-logo.png" width="200" height="200"/> -->
-
-<!-- // const [data, set_data] = useState(null);
-
- fetch("./projects.json")
-   .then(function (res) {
-     return res.json();
-   })
-   .then(function (data) {
-     set_data(data);
-   })
-   .catch(function (err) {
-     console.log(err, "fetch data error");
-   });
-
-   <div>
-   {data
-     ? data.map((data, idx) => {
-         return <p>{data.project_about}</p>
-       })
-     : null}
- </div> -->
-
 ## Technolohies Used
 
-React js
-Scss
-Material ui icons
-Framer Motion
+- React js
+- Material ui icons
+- Framer Motion
 
-Color palette:
-background - #0c0c0c;
-buttons, shapes, dots - #0F33FF;
-lines - #535353;
-texts - #ffffff, #272727;
+#### Color palette:
 
-css space content code - \00a0
+- background: #0c0c0c;
+- buttons, shapes, dots: #0F33FF;
+- lines: #535353;
+- texts: #ffffff, #272727;
+
+- css space content code: '\00a0'
+
+#### Todo
+
+- loading screen with tooltips
+- responsive
 
 ## License
 

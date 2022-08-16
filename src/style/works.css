@@ -37,7 +37,7 @@
   color: #0f33ff;
   transition: color 500ms;
 }
-.works_header > .active{
+.works_header > .active {
   color: #0f33ff;
 }
 
@@ -52,7 +52,8 @@
 .slider_inner {
   display: flex;
   width: 95%;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
+  overflow-x: hidden;
 }
 .w_item {
   min-width: 640px;
@@ -67,10 +68,13 @@
   transition: 4s all;
   background-size: cover;
   cursor: pointer;
+  position: relative;
+
 }
 .w_image:hover {
   background-position: bottom;
 }
+
 .w_btns {
   width: 100%;
   height: 50px;

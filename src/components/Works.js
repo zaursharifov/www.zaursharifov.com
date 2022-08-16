@@ -25,13 +25,13 @@ export default function Works() {
 
   function leftHandle() {
     el.scrollTo({
-      left: el.scrollLeft - 200,
+      left: el.scrollLeft - 400,
       behavior: "smooth",
     });
   }
   function rightHandle() {
     el.scrollTo({
-      left: el.scrollLeft + 200,
+      left: el.scrollLeft + 400,
       behavior: "smooth",
     });
   }
