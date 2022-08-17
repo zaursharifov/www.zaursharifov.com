@@ -1,13 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "../style/works.css";
 import data from "../works";
+import Carousel from "better-react-carousel";
 
 export default function Works() {
   const [selected, set_selected] = useState("all");
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
-  const scrollRef = useRef();
-  const el = scrollRef.current;
 
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
@@ -15,13 +14,6 @@ export default function Works() {
     });
     set_arr(newItem);
     set_selected(curcat);
-    scrollTo();
-  }
-  function scrollTo() {
-    el.scrollTo({
-      left: 0,
-      behavior: "smooth",
-    });
   }
 
   return (
@@ -31,7 +23,6 @@ export default function Works() {
           onClick={() => {
             set_arr(data);
             set_selected("all");
-            scrollTo();
           }}
           className={selected === "all" ? "active" : ""}
         >
@@ -52,10 +43,10 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
-        <div className="slider_inner" ref={scrollRef}>
+        <Carousel cols={1} rows={1} loop={true}>
           {arr.map((item, index) => {
             return (
-              <div key={index} className="w_item">
+              <Carousel.Item key={index}>
                 <div
                   onDoubleClick={() => {
                     window.open(`${item.g}`);
@@ -72,10 +63,10 @@ export default function Works() {
                   <h2>{item.a}</h2>
                   <p>→</p>
                 </button>
-              </div>
+              </Carousel.Item>
             );
           })}
-        </div>
+        </Carousel>
       </div>
     </div>
   );

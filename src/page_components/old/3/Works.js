@@ -1,27 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "../style/works.css";
 import data from "../works";
+import Carousel from "react-simply-carousel";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Works() {
   const [selected, set_selected] = useState("all");
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
-  const scrollRef = useRef();
-  const el = scrollRef.current;
-
+  const [activeSlide, setActiveSlide] = useState(0);
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
       return newVal.c === curcat;
     });
     set_arr(newItem);
     set_selected(curcat);
-    scrollTo();
-  }
-  function scrollTo() {
-    el.scrollTo({
-      left: 0,
-      behavior: "smooth",
-    });
   }
 
   return (
@@ -31,7 +25,6 @@ export default function Works() {
           onClick={() => {
             set_arr(data);
             set_selected("all");
-            scrollTo();
           }}
           className={selected === "all" ? "active" : ""}
         >
@@ -52,10 +45,48 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
-        <div className="slider_inner" ref={scrollRef}>
+        <Carousel
+          containerProps={{
+            style: {
+              width: "100%",
+              justifyContent: "space-evenly",
+              userSelect: "text",
+            },
+          }}
+          activeSlideIndex={activeSlide}
+          onRequestChange={setActiveSlide}
+          forwardBtnProps={{
+            children: <ArrowForwardIosIcon />,
+            style: {
+              width: 60,
+              height: 60,
+              minWidth: 60,
+              alignSelf: "center",
+              backgroundColor: "transparent",
+              color: "#ffffff",
+              border: "none",
+              cursor: "pointer",
+            },
+          }}
+          backwardBtnProps={{
+            children: <ArrowBackIosIcon />,
+            style: {
+              width: 60,
+              height: 60,
+              minWidth: 60,
+              alignSelf: "center",
+              backgroundColor: "transparent",
+              color: "#ffffff",
+              border: "none",
+              cursor: "pointer",
+            },
+          }}
+          itemsToShow={1}
+          speed={500}
+        >
           {arr.map((item, index) => {
             return (
-              <div key={index} className="w_item">
+              <div className="w_item" key={index}>
                 <div
                   onDoubleClick={() => {
                     window.open(`${item.g}`);
@@ -75,7 +106,7 @@ export default function Works() {
               </div>
             );
           })}
-        </div>
+        </Carousel>
       </div>
     </div>
   );

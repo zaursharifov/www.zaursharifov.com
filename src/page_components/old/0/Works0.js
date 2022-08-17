@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import "../style/works.css";
-import data from "../works";
+import data from "../../works";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Works() {
   const [selected, set_selected] = useState("all");
@@ -15,11 +17,21 @@ export default function Works() {
     });
     set_arr(newItem);
     set_selected(curcat);
-    scrollTo();
-  }
-  function scrollTo() {
     el.scrollTo({
       left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function leftHandle() {
+    el.scrollTo({
+      left: el.scrollLeft - 400,
+      behavior: "smooth",
+    });
+  }
+  function rightHandle() {
+    el.scrollTo({
+      left: el.scrollLeft + 400,
       behavior: "smooth",
     });
   }
@@ -31,7 +43,6 @@ export default function Works() {
           onClick={() => {
             set_arr(data);
             set_selected("all");
-            scrollTo();
           }}
           className={selected === "all" ? "active" : ""}
         >
@@ -52,6 +63,9 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
+        <button className="arrow_btn" onClick={leftHandle}>
+          <ArrowBackIosIcon />
+        </button>
         <div className="slider_inner" ref={scrollRef}>
           {arr.map((item, index) => {
             return (
@@ -76,6 +90,9 @@ export default function Works() {
             );
           })}
         </div>
+        <button className="arrow_btn" onClick={rightHandle}>
+          <ArrowForwardIosIcon />
+        </button>
       </div>
     </div>
   );
