@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonGroup from "../page_components/ButtonGroup";
+import ButtonGroup from "./ButtonGroup";
 import "../style/sidebar.css";
 
 export default function Sidebar({ changeComponent, component }) {

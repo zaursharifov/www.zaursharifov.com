@@ -10,10 +10,9 @@ const data = [
   {
     i: w0,
     l: "https://gerdabutter.com",
-    g: null,
+    g: "",
     a: "Gerda Butter",
     c: "Websites",
-    check: false,
   },
 
   {
@@ -22,7 +21,6 @@ const data = [
     g: "https://github.com/zeraphosa1/templates/tree/main/old_portfolio_1",
     a: "Old portfolio",
     c: "Websites",
-    check: false,
   },
   {
     i: w2,
@@ -30,7 +28,6 @@ const data = [
     g: "https://github.com/zeraphosa1/buta_grup/tree/main/assignment_2",
     a: "Buta Grup assignment",
     c: "Websites",
-    check: false,
   },
   {
     i: w3,
@@ -38,7 +35,6 @@ const data = [
     g: "https://github.com/zeraphosa1/templates/tree/main/old_portfolio_0",
     a: "Old portfolio",
     c: "Websites",
-    check: false,
   },
   {
     i: w4,
@@ -46,7 +42,6 @@ const data = [
     g: null,
     a: "Admin panel example",
     c: "Websites",
-    check: false,
   },
   {
     i: w5,
@@ -54,7 +49,6 @@ const data = [
     g: null,
     a: "Turaz dictianory by Bitsody",
     c: "Mobile Applications",
-    check: false,
   },
   {
     i: w6,
@@ -62,7 +56,6 @@ const data = [
     g: "https://github.com/zeraphosa/atik_tespit_sistemi",
     a: "Atık Tespit Sistemi",
     c: "Mobile Applications",
-    check: false,
   },
 ];
 

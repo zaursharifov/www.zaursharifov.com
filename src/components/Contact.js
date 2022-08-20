@@ -12,7 +12,11 @@ export default function Contact() {
       <div className="card">
         <div className="c_txt_container">
           <button className="c_txt">
-            <a href="mailto:zaur.sharifov@outlook.com" rel="noreferrer">
+            <a
+              className="c_txt"
+              href="mailto:zaur.sharifov@outlook.com"
+              rel="noreferrer"
+            >
               zaur.sharifov@outlook.com
             </a>
           </button>

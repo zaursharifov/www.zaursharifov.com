@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import ScrollContainer from "react-indiana-drag-scroll";
 import "../style/works.css";
 import data from "../works";
 
@@ -6,8 +7,6 @@ export default function Works() {
   const [selected, set_selected] = useState("all");
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
-  const scrollRef = useRef();
-  const el = scrollRef.current;
 
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
@@ -15,13 +14,6 @@ export default function Works() {
     });
     set_arr(newItem);
     set_selected(curcat);
-    scrollTo();
-  }
-  function scrollTo() {
-    el.scrollTo({
-      left: 0,
-      behavior: "smooth",
-    });
   }
 
   return (
@@ -31,7 +23,6 @@ export default function Works() {
           onClick={() => {
             set_arr(data);
             set_selected("all");
-            scrollTo();
           }}
           className={selected === "all" ? "active" : ""}
         >
@@ -52,7 +43,7 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
-        <div className="slider_inner" ref={scrollRef}>
+        <ScrollContainer className="slider_inner">
           {arr.map((item, index) => {
             return (
               <div key={index} className="w_item">
@@ -75,7 +66,7 @@ export default function Works() {
               </div>
             );
           })}
-        </div>
+        </ScrollContainer>
       </div>
     </div>
   );

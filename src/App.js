@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Navbar from "./page_components/Navbar";
+import Sidebar from "./page_components/Sidebar";
 import Home from "./components/Home";
 import Works from "./components/Works";
 import About from "./components/About";
