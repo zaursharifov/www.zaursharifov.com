@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Navbar from "./page_components/Navbar";
 import Sidebar from "./page_components/Sidebar";
 import Home from "./components/Home";
@@ -26,19 +27,38 @@ export default function App() {
         <div className="container">
           <Navbar />
           <Sidebar changeComponent={changeComponent} component={component} />
-
-          <div className="content">
+          <motion.div
+            className="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             {component === "Home" ? <Home set_component={set_component} /> : ""}
-          </div>
-          <div className="content">
+          </motion.div>
+          <motion.div
+            className="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             {component === "Works" ? <Works /> : ""}
-          </div>
-          <div className="content">
+          </motion.div>
+          <motion.div
+            className="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             {component === "About" ? <About /> : ""}
-          </div>
-          <div className="content">
+          </motion.div>
+          <motion.div
+            className="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             {component === "Contact" ? <Contact /> : ""}
-          </div>
+          </motion.div>
         </div>
       ) : (
         <Loader />

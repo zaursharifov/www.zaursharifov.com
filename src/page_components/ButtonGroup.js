@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../style/sidebar.css";
 
-export default function ButtonGroup({ buttons, doSomething, component }) {
+export default function ButtonGroup({ buttons, doSomething }) {
   const [clickedId, set_clickedId] = useState(0);
 
   function handleClick(event, id) {
     set_clickedId(id);
     doSomething(event);
   }
-  useEffect(() => {
-    if (component === "Contact") {
-      set_clickedId(4);
-    }
-  }, [component]);
 
   return (
     <>
@@ -28,7 +23,7 @@ export default function ButtonGroup({ buttons, doSomething, component }) {
           ) : (
             <>
               <span className="dot">•</span>
-              {buttonLabel}
+              <p className="menu_p">{buttonLabel}</p>
             </>
           )}
         </button>

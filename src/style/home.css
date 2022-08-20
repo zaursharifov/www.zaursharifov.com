@@ -16,6 +16,7 @@
   font-weight: 900;
   line-height: 68px;
   margin-bottom: 90px;
+  cursor: default;
 }
 .h_btn {
   text-decoration: none;
@@ -73,6 +74,7 @@
 }
 .b_section {
   color: #272727;
+  cursor: default;
 }
 .b_section:hover {
   transition: color 300ms ease-in-out;
