@@ -69,14 +69,16 @@
   border: none;
 }
 .w_btns > p {
+  font-family: "Montserrat";
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
 }
 .w_btns:hover > p {
   color: #0f33ff;
   transition: color 500ms;
 }
 .w_btns h2 {
+  font-family: "Montserrat";
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;

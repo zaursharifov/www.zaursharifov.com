@@ -7,11 +7,16 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Loader from "./page_components/Loader";
 import "./style/app.css";
+import Mobile from "./components/Mobile";
 
 export default function App() {
   const [loading, set_loading] = useState(true);
   const [component, set_component] = useState("Home");
   const visible = true;
+
+  function isMobile() {
+    return window.innerWidth <= 800 && window.innerHeight <= 600;
+  }
 
   function changeComponent(event) {
     set_component(event.target.name);
@@ -23,7 +28,9 @@ export default function App() {
 
   return (
     <>
-      {loading === false ? (
+      {isMobile() ? (
+        <Mobile />
+      ) : loading === false ? (
         <div className="container">
           <Navbar />
           <Sidebar changeComponent={changeComponent} component={component} />
