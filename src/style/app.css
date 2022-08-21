@@ -9,10 +9,21 @@ body {
   position: relative;
 }
 .content {
-  /* border: 1px solid green; */
   width: calc(100% - 120px);
   height: calc(100% - 150px);
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.visible {
+  animation: 1s fadeIn ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

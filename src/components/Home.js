@@ -2,7 +2,6 @@ import React from "react";
 import "../style/home.css";
 
 export default function Home({ set_component }) {
-  
   return (
     <div className="home">
       <div className="top">
