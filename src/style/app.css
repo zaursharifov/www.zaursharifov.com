@@ -17,6 +17,7 @@ body {
 }
 .visible {
   animation: 1s fadeIn ease-in-out forwards;
+  z-index: 1;
 }
 
 @keyframes fadeIn {

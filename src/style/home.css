@@ -15,7 +15,7 @@
   font-size: 68px;
   font-weight: 900;
   line-height: 68px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   cursor: default;
 }
 .h_btn {
@@ -91,11 +91,23 @@
   font-weight: 400;
   line-height: 22.4px;
 }
-
+.a_top {
+  z-index: 1;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .a_bottom {
   z-index: -1;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 350px;
   gap: 50px;
   margin-top: 10px;
 }
@@ -128,8 +140,8 @@
   border-radius: 50%;
   background-color: #0f33ff;
   position: absolute;
-  top: 24%;
-  left: 27%;
+  top: 45%;
+  left: 14%;
   transform: translate(-43%, -31%);
 }
 .square {
@@ -140,7 +152,7 @@
   background-color: #0f33ff;
   position: absolute;
   top: 10%;
-  left: 52%;
+  left: 45%;
 }
 .square2 {
   width: 10px;
@@ -148,8 +160,8 @@
   border: 1px solid #0f33ff;
   background-color: #0f33ff;
   position: absolute;
-  top: 31%;
-  left: 43%;
+  top: 61%;
+  left: 36%;
 }
 .triangle {
   transform: rotate(290deg);
@@ -162,6 +174,6 @@
   border-top: solid 8px transparent;
   position: absolute;
   top: 10%;
-  left: 17%;
+  left: 5%;
   box-sizing: border-box;
 }
