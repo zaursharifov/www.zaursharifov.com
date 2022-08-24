@@ -83,3 +83,11 @@
   font-weight: 700;
   line-height: 25.6px;
 }
+
+@media only screen and (max-width: 912px){
+  .w_item {
+    min-width: 340px;
+    min-height: 200px;
+    padding: 50px 20px;
+  }
+}
