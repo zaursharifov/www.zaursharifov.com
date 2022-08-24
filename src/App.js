@@ -21,7 +21,7 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => set_loading(false), 1000);
-    if (window.innerWidth <= 912 || window.innerHeight <= 1000) {
+    if (window.innerWidth <= 912 && window.innerHeight <= 1000) {
       set_mobile(true);
     }
   }, []);
