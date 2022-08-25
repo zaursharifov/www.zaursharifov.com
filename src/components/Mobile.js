@@ -74,14 +74,14 @@ export default function Mobile() {
             >
               +994 70 574 14 52
             </button>
-            <button
+            {/* <button
               className="c_txt"
               onClick={() => {
                 window.open("https://wa.me/+905536441452");
               }}
             >
               +905 53 644 14 52
-            </button>
+            </button> */}
           </div>
 
           <div className="c_btn_container">
