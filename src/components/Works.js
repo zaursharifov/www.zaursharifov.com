@@ -30,8 +30,8 @@ export default function Works() {
   useEffect(() => {
     if (sliderRef.current) {
       function scrollHandle() {
-        const isEnd = sliderRef.current.scrollLeft + sliderRef.current.offsetWidth == sliderRef.current.scrollWidth;
-        const isBegin = sliderRef.current.scrollLeft == 0;
+        const isEnd = sliderRef.current.scrollLeft + sliderRef.current.offsetWidth === sliderRef.current.scrollWidth;
+        const isBegin = sliderRef.current.scrollLeft === 0;
         set_prev(!isBegin);
         set_next(!isEnd);
       }
@@ -86,14 +86,18 @@ export default function Works() {
               <div key={index} className="w_item">
                 <div
                   onDoubleClick={() => {
-                    window.open(`${item.g}`);
+                    if (item.g !== null) {
+                      window.open(`${item.g}`);
+                    } else window.alert("Not Found");
                   }}
                   className="w_image"
                   style={{ backgroundImage: `url(${item.i})` }}
                 />
                 <button
                   onClick={() => {
-                    window.open(item.l);
+                    if (item.l !== null) {
+                      window.open(item.l);
+                    } else window.alert("Not Found");
                   }}
                   className="w_btns"
                 >
