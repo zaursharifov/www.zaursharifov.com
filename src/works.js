@@ -9,8 +9,22 @@ const data = [
 
   {
     i: `/works/old_portfolio_1.png`,
-    l: "https://zeraphosa-htmlcssjavascript.netlify.app/portfolio-template-1/index.html",
+    l: "https://zeracodes.github.io/html_css_javascript/portfolio-template-1/index.html",
     g: "https://github.com/zeraphosa1/html_css_javascript/tree/main/portfolio-template-1",
+    a: "Old portfolio",
+    c: "Websites",
+  },
+  {
+    i: `/works/buta_project2.png`,
+    l: "https://zeracodes.github.io/html_css_javascript/buta-assignment-2/index.html",
+    g: "https://github.com/zeraphosa1/html_css_javascript/tree/main/buta-assignment-2",
+    a: "Buta Grup assignment",
+    c: "Websites",
+  },
+  {
+    i: `/works/old_portfolio_0.png`,
+    l: "https://zeracodes.github.io/html_css_javascript/portfolio-template-0/index.html",
+    g: "https://github.com/zeraphosa1/html_css_javascript/tree/main/portfolio-template-0",
     a: "Old portfolio",
     c: "Websites",
   },
@@ -22,23 +36,9 @@ const data = [
     c: "Websites",
   },
   {
-    i: `/works/buta_project2.png`,
-    l: "https://zeraphosa-htmlcssjavascript.netlify.app/buta-assignment-2/index.html",
-    g: "https://github.com/zeraphosa1/html_css_javascript/tree/main/buta-assignment-2",
-    a: "Buta Grup assignment",
-    c: "Websites",
-  },
-  {
-    i: `/works/old_portfolio_0.png`,
-    l: "https://zeraphosa-htmlcssjavascript.netlify.app/portfolio-template-0/index.html",
-    g: "https://github.com/zeraphosa1/html_css_javascript/tree/main/portfolio-template-0",
-    a: "Old portfolio",
-    c: "Websites",
-  },
-  {
     i: `/works/zera_panel.png`,
     l: null,
-    g: "https://github.com/moonxen/dashboard-example",
+    g: "https://github.com/zeracodes/clone_dashboard",
     a: "Admin panel example",
     c: "Websites",
   },
@@ -47,13 +47,6 @@ const data = [
     l: "https://turaz.bitsody.com",
     g: null,
     a: "Turaz dictianory by Bitsody",
-    c: "Mobile Applications",
-  },
-  {
-    i: `/works/atiktespit.png`,
-    l: null,
-    g: "https://github.com/zeraphosa/atik_tespit_sistemi",
-    a: "Atık Tespit Sistemi",
     c: "Mobile Applications",
   },
 ];
