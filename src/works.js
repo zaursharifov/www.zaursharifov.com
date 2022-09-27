@@ -36,13 +36,6 @@ const data = [
     c: "Websites",
   },
   {
-    i: `/works/zera_panel.png`,
-    l: null,
-    g: "https://github.com/zeracodes/clone_dashboard",
-    a: "Admin panel example",
-    c: "Websites",
-  },
-  {
     i: `/works/turaz.png`,
     l: "https://turaz.bitsody.com",
     g: null,
