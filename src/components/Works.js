@@ -87,8 +87,8 @@ export default function Works() {
                 <div
                   onDoubleClick={() => {
                     if (item.g !== null) {
-                      window.open(`${item.g}`);
-                    } else window.alert("Not Found");
+                      window.open(item.g);
+                    } else window.alert("Github page not found! \nPrivate Project");
                   }}
                   className="w_image"
                   style={{ backgroundImage: `url(${item.i})` }}
@@ -97,7 +97,7 @@ export default function Works() {
                   onClick={() => {
                     if (item.l !== null) {
                       window.open(item.l);
-                    } else window.alert("Not Found");
+                    } else window.alert("Live version not found!");
                   }}
                   className="w_btns"
                 >

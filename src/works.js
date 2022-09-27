@@ -36,6 +36,13 @@ const data = [
     c: "Websites",
   },
   {
+    i: `/works/html_css_javascript.png`,
+    l: "https://zeracodes.github.io/html_css_javascript/",
+    g: "https://github.com/zeracodes/html_css_javascript",
+    a: "Basic Projects",
+    c: "Websites",
+  },
+  {
     i: `/works/turaz.png`,
     l: "https://turaz.bitsody.com",
     g: null,
