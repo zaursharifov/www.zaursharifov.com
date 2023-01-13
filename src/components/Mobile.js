@@ -1,3 +1,4 @@
+import React from "react";
 import "../style/mobile.css";
 import Works from "./Works";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -46,11 +47,7 @@ export default function Mobile() {
         <span className="m_square"></span>
         <span className="m_square2"></span>
         <h1 className="ma_h1">Jr. Full Stack Developer</h1>
-        <a
-          href="./about/cv_zaursharifov.pdf"
-          target={"_blank"}
-          className="a_btn"
-        >
+        <a href="./about/cv_zaursharifov.pdf" target={"_blank"} className="a_btn">
           RESUME <span className="span">→</span>
         </a>
       </div>
@@ -58,11 +55,7 @@ export default function Mobile() {
         <div className="m_card">
           <div className="c_txt_container">
             <button className="c_txt">
-              <a
-                className="c_txt"
-                href="mailto:zaur.sharifov@outlook.com"
-                rel="noreferrer"
-              >
+              <a className="c_txt" href="mailto:zaur.sharifov@outlook.com" rel="noreferrer">
                 zaur.sharifov@outlook.com
               </a>
             </button>

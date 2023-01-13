@@ -37,9 +37,7 @@ export default function Works() {
       }
       scrollHandle();
       sliderRef.current.addEventListener("scroll", scrollHandle);
-      return () => {
-        sliderRef?.current?.removeEventListener("scroll", scrollHandle);
-      };
+      return () => {sliderRef.current.removeEventListener("scroll", scrollHandle);}
     }
   }, [sliderRef]);
 
