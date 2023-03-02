@@ -1,55 +1,27 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./page_components/Navbar";
-import Sidebar from "./page_components/Sidebar";
-import Home from "./components/Home";
-import Works from "./components/Works";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Loader from "./page_components/Loader";
-import "./style/app.css";
-import Mobile from "./components/Mobile";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SideBar from "./components/Sidebar";
+import Home from "./pages/Home";
 
 export default function App() {
-  const [loading, set_loading] = useState(true);
-  const [component, set_component] = useState("Home");
-  const [mobile, set_mobile] = useState(false);
-  const visible = true;
-
-  function changeComponent(event) {
-    set_component(event.target.name);
-  }
-
-  useEffect(() => {
-    setTimeout(() => set_loading(false), 1000);
-    if (window.innerWidth <= 912 && window.innerHeight <= 1000) {
-      set_mobile(true);
-    }
-  }, []);
-
   return (
-    <>
-      {mobile ? (
-        <Mobile />
-      ) : loading === false ? (
-        <div className="container">
-          <Navbar />
-          <Sidebar changeComponent={changeComponent} component={component} />
-          <div className={`content ${visible ? "visible" : null}`}>
-            {component === "Home" ? <Home set_component={set_component} /> : ""}
-          </div>
-          <div className="content">
-            {component === "Works" ? <Works /> : ""}
-          </div>
-          <div className="content">
-            {component === "About" ? <About /> : ""}
-          </div>
-          <div className="content">
-            {component === "Contact" ? <Contact /> : ""}
-          </div>
+    <BrowserRouter>
+      <div className="app-container">
+        <div className="app-header">
+          <a className="logo" href="/">
+            ZAUR SHARIFOV
+          </a>
         </div>
-      ) : (
-        <Loader />
-      )}
-    </>
+        <SideBar />
+        <div className="app-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
