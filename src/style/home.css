@@ -1,8 +1,7 @@
 .home {
-  max-width: 1200px;
-  height: calc(590px + 100px);
+  max-width: 1000px;
+  height: calc(490px + 100px);
   margin: 0 auto;
-  padding: 0 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +12,7 @@
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  margin-bottom: -90px;
+  margin-bottom: -15px;
 }
 .h_h1 {
   font-size: 68px;
@@ -72,7 +71,7 @@
 }
 
 .bottom {
-  margin-top: -80px;
+  margin-top: -20px;
   z-index: 1;
   display: flex;
   justify-content: space-between;
@@ -96,6 +95,16 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 22.4px;
+}
+.about {
+  max-width: 1200px;
+  height: calc(590px + 100px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  position: relative;
 }
 .a_top {
   z-index: 1;
@@ -147,8 +156,8 @@
   background-color: #0f33ff;
   position: absolute;
   top: 45%;
-  left: 14%;
-  transform: translate(-43%, -31%);
+  left: 16%;
+  transform: translate(-45%, -16%);
 }
 .square {
   transform: rotate(320deg);
@@ -166,8 +175,9 @@
   border: 1px solid #0f33ff;
   background-color: #0f33ff;
   position: absolute;
-  top: 61%;
-  left: 36%;
+  top: 63%;
+  left: 40%;
+  transform: translate(-63%,-40%);
 }
 .triangle {
   transform: rotate(290deg);

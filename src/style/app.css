@@ -13,7 +13,7 @@ body {
 }
 .app-header {
   /* border: 1px solid #ffffff; */
-  background-color: #0c0c0c;
+  background-color: transparent;
   height: 100px;
   display: flex;
   justify-content: center;
