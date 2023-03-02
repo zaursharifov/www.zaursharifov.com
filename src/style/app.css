@@ -7,6 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .app-container {
   max-width: 1440px;
   height: 100vh;
@@ -37,15 +38,6 @@ body {
   margin: 0 auto;
 }
 
-.scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-section {
-  height: 100vh;
-  scroll-snap-align: center;
-}
 /* 
 .visible {
   animation: 1s fadeIn ease-in-out forwards;
