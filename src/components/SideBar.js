@@ -1,36 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/sidebar.css";
 
-export default function Sidebar({ changeComponent, component }) {
+export default function Sidebar({ currentIndex, setCurrentIndex }) {
+  const pages = ["Home", "Projects", "About", "Contact"];
+  function handleClick(event, id) {
+    // setClickedId(id);
+  }
+
   return (
     <div className="sidebar">
-      <ButtonGroup buttons={["Home", "Works", "About", "Contact"]} doSomething={changeComponent} component={component} />
+      {pages.map((item, id) => (
+        <button className="btn" onClick={(event) => handleClick(event, id)}>
+          {id === currentIndex ? (
+            <>
+              <span className="dot">•</span>
+              <p className="menu_p">{pages[currentIndex]}</p>
+            </>
+          ) : (
+            <span className="num">{id}</span>
+          )}
+        </button>
+      ))}
     </div>
   );
 }
 
-function ButtonGroup({ buttons, doSomething }) {
-  const [clickedId, setClickedId] = useState(0);
-
-  function handleClick(event, id) {
-    setClickedId(id);
-    doSomething(event);
-  }
-
-  return (
-    <>
-      {buttons.map((buttonLabel, i) => (
-        <button key={i} name={buttonLabel} onClick={(event) => handleClick(event, i)} className={"btn"}>
-          {i !== clickedId ? (
+// const [clickedId, setClickedId] = useState(0);
+/* {i !== clickedId ? (
             <span className="num">{i}</span>
-          ) : (
-            <>
-              <span className="dot">•</span>
-              <p className="menu_p">{buttonLabel}</p>
-            </>
-          )}
-        </button>
-      ))}
-    </>
-  );
-}
+          )  */

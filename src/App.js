@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <Sidebar />
+      <Sidebar currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
       <ReactScrollWheelHandler upHandler={prevIndex} downHandler={nextIndex}>
         {pages[currentIndex]}
       </ReactScrollWheelHandler>

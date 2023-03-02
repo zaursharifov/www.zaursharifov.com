@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 .app-header {
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   background-color: #0c0c0c;
   max-width: 1200px;
   margin: 0 auto;
@@ -32,7 +32,7 @@ body {
   letter-spacing: 3px;
 }
 .app-content {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
