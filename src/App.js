@@ -15,12 +15,12 @@ export default function App() {
         </a>
       </div>
       <Sidebar />
-      <div className="app-content">
+      <>
         <Home />
         <Projects />
         <About />
         <Contact />
-      </div>
+      </>
     </div>
   );
 }
