@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../style/sidebar.css";
 
 export default function Sidebar({ currentIndex, setCurrentIndex }) {
   const pages = ["Home", "Projects", "About", "Contact"];
-  function handleClick(event, id) {
-    // setClickedId(id);
-  }
 
   return (
     <div className="sidebar">
       {pages.map((item, id) => (
-        <button className="btn" onClick={(event) => handleClick(event, id)}>
+        <button className="btn" onClick={() => setCurrentIndex(id)}>
           {id === currentIndex ? (
             <>
               <span className="dot">•</span>
@@ -24,8 +21,3 @@ export default function Sidebar({ currentIndex, setCurrentIndex }) {
     </div>
   );
 }
-
-// const [clickedId, setClickedId] = useState(0);
-/* {i !== clickedId ? (
-            <span className="num">{i}</span>
-          )  */
