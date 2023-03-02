@@ -6,7 +6,7 @@ import "../style/home.css";
 export default function Home() {
   const visible = true;
   return (
-    <div className={`app-content ${visible && "visible"}`}>
+    <div className={`home ${visible && "visible"}`}>
       <Navbar />
       <div className="top">
         <div>

@@ -1,4 +1,8 @@
-.app-content {
+.home {
+  max-width: 1200px;
+  height: calc(590px + 100px);
+  margin: 0 auto;
+  padding: 0 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

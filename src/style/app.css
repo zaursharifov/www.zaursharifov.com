@@ -27,12 +27,10 @@ body {
   color: #ffffff;
   letter-spacing: 3px;
 }
-.app-content {
-  /* border: 1px solid green; */
-  max-width: 1000px;
-  height: calc(590px + 100px);
-  margin: 0 auto;
-}
+/* .app-content {
+  border: 1px solid green;
+
+} */
 
 .visible {
   animation: 1s fadeIn ease-in-out forwards;
