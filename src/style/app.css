@@ -16,9 +16,7 @@ body {
 .app-header {
   /* border: 1px solid #ffffff; */
   background-color: #0c0c0c;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 45px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,8 +31,8 @@ body {
 }
 .app-content {
   /* border: 1px solid green; */
-  max-width: 1200px;
-  height: 100vh;
+  max-width: 1000px;
+  height: calc(590px + 100px);
   margin: 0 auto;
 }
 
