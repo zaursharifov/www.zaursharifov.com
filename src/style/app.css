@@ -1,0 +1,30 @@
+body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+  }
+  .app-container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .app-content {
+    width: calc(100% - 120px);
+    height: calc(100% - 150px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .visible {
+    animation: 1s fadeIn ease-in-out forwards;
+    z-index: 1;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

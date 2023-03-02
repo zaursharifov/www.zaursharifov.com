@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SideBar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 export default function App() {
   return (
@@ -12,7 +15,7 @@ export default function App() {
             ZAUR SHARIFOV
           </a>
         </div>
-        <SideBar />
+        <Sidebar />
         <div className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
