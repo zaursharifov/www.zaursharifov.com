@@ -1,25 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   background-color: #0c0c0c;
   color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container {
+.app-container {
   max-width: 1440px;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
-  position: relative;
 }
-.content {
-  width: calc(100% - 120px);
-  height: calc(100% - 150px);
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.app-header {
+  /* border: 1px solid #ffffff; */
+  background-color: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.app-header .logo {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+/* .app-content {
+  border: 1px solid green;
+
+} */
+
 .visible {
   animation: 1s fadeIn ease-in-out forwards;
   z-index: 1;
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;

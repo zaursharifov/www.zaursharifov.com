@@ -1,55 +1,36 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./page_components/Navbar";
-import Sidebar from "./page_components/Sidebar";
-import Home from "./components/Home";
-import Works from "./components/Works";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Loader from "./page_components/Loader";
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import "./style/app.css";
-import Mobile from "./components/Mobile";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 export default function App() {
-  const [loading, set_loading] = useState(true);
-  const [component, set_component] = useState("Home");
-  const [mobile, set_mobile] = useState(false);
-  const visible = true;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact />];
 
-  function changeComponent(event) {
-    set_component(event.target.name);
+  function nextIndex() {
+    if (currentIndex === pages.length - 1) {
+      return setCurrentIndex(0);
+    }
+    return setCurrentIndex(currentIndex + 1);
   }
 
-  useEffect(() => {
-    setTimeout(() => set_loading(false), 1000);
-    if (window.innerWidth <= 912 && window.innerHeight <= 1000) {
-      set_mobile(true);
+  function prevIndex() {
+    if (currentIndex === 0) {
+      return setCurrentIndex(pages.length - 1);
     }
-  }, []);
+    return setCurrentIndex(currentIndex - 1);
+  }
 
   return (
-    <>
-      {mobile ? (
-        <Mobile />
-      ) : loading === false ? (
-        <div className="container">
-          <Navbar />
-          <Sidebar changeComponent={changeComponent} component={component} />
-          <div className={`content ${visible ? "visible" : null}`}>
-            {component === "Home" ? <Home set_component={set_component} /> : ""}
-          </div>
-          <div className="content">
-            {component === "Works" ? <Works /> : ""}
-          </div>
-          <div className="content">
-            {component === "About" ? <About /> : ""}
-          </div>
-          <div className="content">
-            {component === "Contact" ? <Contact /> : ""}
-          </div>
-        </div>
-      ) : (
-        <Loader />
-      )}
-    </>
+    <div className="app-container">
+      <Sidebar currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+      <ReactScrollWheelHandler upHandler={prevIndex} downHandler={nextIndex}>
+        {pages[currentIndex]}
+      </ReactScrollWheelHandler>
+    </div>
   );
 }

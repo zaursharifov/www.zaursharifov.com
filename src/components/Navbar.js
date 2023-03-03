@@ -1,9 +1,9 @@
 import React from "react";
-import "../style/navbar.css";
+import "../style/app.css"
 
-export default function Navbar({ isActive, set_isActive }) {
+export default function Navbar() {
   return (
-    <div className="navbar">
+    <div className="app-header">
       <a className="logo" href="/">
         ZAUR SHARIFOV
       </a>

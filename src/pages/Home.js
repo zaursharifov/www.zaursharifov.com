@@ -1,20 +1,17 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import "../style/app.css";
 import "../style/home.css";
 
-export default function Home({ set_component }) {
+export default function Home({setCurrentIndex}) {
+  const visible = true;
   return (
-    <div className="home">
+    <div className={`home ${visible && "visible"}`}>
+      <Navbar />
       <div className="top">
         <div>
           <h1 className="h_h1">Creative websites for your brand</h1>
-          <button
-            className="h_btn"
-            onClick={() => {
-              set_component("Contact");
-            }}
-          >
-            CONTACT ME →
-          </button>
+          <button className="h_btn" onClick={()=> setCurrentIndex(2)}>CONTACT ME →</button>
         </div>
         <img className="h_img" src="./about/home.png" alt="home_png" />
       </div>
