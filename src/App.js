@@ -26,11 +26,11 @@ export default function App() {
   }
 
   return (
-    <div className="app-container">
-      <Sidebar currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-      <ReactScrollWheelHandler upHandler={prevIndex} downHandler={nextIndex}>
+    <ReactScrollWheelHandler upHandler={prevIndex} downHandler={nextIndex}>
+      <div className="app-container">
+        <Sidebar currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         {pages[currentIndex]}
-      </ReactScrollWheelHandler>
-    </div>
+      </div>
+    </ReactScrollWheelHandler>
   );
 }

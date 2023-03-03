@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import "../style/app.css";
 import "../style/home.css";
 
@@ -7,7 +7,7 @@ export default function Home({setCurrentIndex}) {
   const visible = true;
   return (
     <div className={`home ${visible && "visible"}`}>
-      <Navbar />
+      <Header />
       <div className="top">
         <div>
           <h1 className="h_h1">Creative websites for your brand</h1>

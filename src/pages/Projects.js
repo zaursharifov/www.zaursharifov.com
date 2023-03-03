@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import "../style/app.css";
 import "../style/works.css";
 import data from "../works";
@@ -48,7 +48,7 @@ export default function Works() {
 
   return (
     <div className={`works ${visible && "visible"}`}>
-      <Navbar />
+      <Header />
       <div className="works_header">
         <button
           onClick={() => {

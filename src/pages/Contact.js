@@ -3,13 +3,13 @@ import "../style/contact.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 
 export default function Contact() {
   const visible = true;
   return (
     <>
-      <Navbar />
+      <Header />
       <div className={`contact ${visible && "visible"}`}>
         <div className="img-border-container">
           <div className="border edge-l"></div>

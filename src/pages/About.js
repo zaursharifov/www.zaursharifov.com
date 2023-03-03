@@ -1,13 +1,13 @@
 import React from "react";
 import { Icon } from "../components/Icons";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import "../style/home.css";
 
 export default function About() {
   const visible = true;
   return (
     <div className={`about ${visible && "visible"}`}>
-      <Navbar />
+      <Header />
       <div className="a_top">
         <div>
           <span className="circle"></span>
