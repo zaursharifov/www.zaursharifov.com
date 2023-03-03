@@ -109,7 +109,6 @@
 .a_top {
   z-index: 1;
   width: 80%;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-end;

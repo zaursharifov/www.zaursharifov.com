@@ -12,7 +12,6 @@ body {
   margin: 0 auto;
 }
 .app-header {
-  /* border: 1px solid #ffffff; */
   background-color: transparent;
   height: 100px;
   display: flex;
@@ -27,11 +26,6 @@ body {
   color: #ffffff;
   letter-spacing: 3px;
 }
-/* .app-content {
-  border: 1px solid green;
-
-} */
-
 .visible {
   animation: 1s fadeIn ease-in-out forwards;
   z-index: 1;

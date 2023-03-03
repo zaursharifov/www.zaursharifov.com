@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Sidebar from "./components/Sidebar";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import Sidebar from "./components/SideBar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./style/app.css";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
