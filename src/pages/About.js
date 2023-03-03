@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "../components/Icons";
 import Navbar from "../components/Navbar";
 import "../style/home.css";
 
@@ -19,10 +20,42 @@ export default function About() {
           </a>
         </div>
         <div className="a_bottom">
-          <img className="a_img" src="./about/companies/bitsody.jpg" alt="bitsody" />
-          <img className="a_img" src="./about/companies/buta.jpg" alt="buta" />
-          <img className="a_img" src="./about/companies/fiverr.jpg" alt="fiverr" />
-          <img className="a_img" src="./about/companies/utest.png" alt="utest" />
+          <a href="/" className="a_img">
+            <Icon name={"linkedin"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"github"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"instagram"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"spotify"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"whatsapp"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"telegram"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"twitter"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"mail"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"discord"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"codepen"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"upwork"} size={34} />
+          </a>
+          <a href="/" className="a_img">
+            <Icon name={"steam"} size={34} />
+          </a>
         </div>
       </div>
     </div>
