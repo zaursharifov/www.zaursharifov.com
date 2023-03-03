@@ -27,8 +27,8 @@
   z-index: 1;
   position: absolute;
   top: 50%;
-  left: 80%;
-  transform: translate(-80%, -50%);
+  left: 87%;
+  transform: translate(-87%, -50%);
   height: 400px;
   width: 300px;
   border-radius: 50px;
@@ -38,52 +38,27 @@
   background-color: #0c0c0c;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.c_txt_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.c_btn_container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.c_txt {
-  font-family: "Montserrat";
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22.4px;
-  color: #ffffff;
-  background-color: #0c0b0c;
-  border: none;
-  cursor: pointer;
-}
-.c_txt > a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.c_btn {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
+  gap: 30px;
 }
-
-.c_btn:hover,
-.c_txt:hover {
-  color: #0f33ff;
-  transition: color 500ms;
+.card input,
+.card textarea {
+  font-family: "Montserrat";
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  outline-offset: none;
+  padding-left: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #535353;
+  color: #ffffff;
+}
+.card textarea{
+  resize: none;
+  width: 200px;
+  height: 170px;
 }

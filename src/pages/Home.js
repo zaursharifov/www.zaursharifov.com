@@ -11,7 +11,7 @@ export default function Home({setCurrentIndex}) {
       <div className="top">
         <div>
           <h1 className="h_h1">Creative websites for your brand</h1>
-          <button className="h_btn" onClick={()=> setCurrentIndex(2)}>CONTACT ME →</button>
+          <button className="h_btn" onClick={()=> setCurrentIndex(3)}>CONTACT ME →</button>
         </div>
         <img className="h_img" src="./about/home.png" alt="home_png" />
       </div>
