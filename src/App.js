@@ -9,7 +9,7 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const pages = [<Home />, <Projects />, <About />, <Contact />];
+  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact />];
 
   function nextIndex() {
     if (currentIndex === pages.length - 1) {

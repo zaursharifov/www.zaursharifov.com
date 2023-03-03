@@ -17,9 +17,9 @@
   position: absolute;
   width: 100px;
   height: 60px;
-  top: 59%;
-  left: 37%;
-  transform: translate(-59%, -37%);
+  top: 52%;
+  left: 36.5%;
+  transform: translate(-52%, -36.5%);
   filter: brightness(50%);
 }
 
