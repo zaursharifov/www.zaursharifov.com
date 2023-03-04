@@ -85,7 +85,7 @@
   height: 100%;
   transition: 4s all;
   background-size: cover;
-  cursor: pointer;
+  pointer-events: none;
 }
 .w_image:hover {
   background-position: bottom;
@@ -101,6 +101,9 @@
   background-color: transparent;
   color: #ffffff;
   border: none;
+}
+.w_btns:hover .w_image {
+  background-position: bottom;
 }
 .w_btns > p {
   font-family: "Montserrat";

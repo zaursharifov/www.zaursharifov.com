@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
 import Header from "../components/Header";
-import "../style/app.css";
-import "../style/works.css";
-import data from "../works";
+import data from "../projects";
+import "../style/projects.css";
 
 export default function Works() {
   const visible = true;
@@ -12,9 +11,6 @@ export default function Works() {
   const items = [...new Set(data.map((val) => val.c))];
 
   const sliderRef = useRef();
-  // const [prev, set_prev] = useState(false);
-  // const [next, set_next] = useState(false);
-
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
       return newVal.c === curcat;
@@ -22,29 +18,6 @@ export default function Works() {
     set_arr(newItem);
     set_selected(curcat);
   }
-
-  // function slideNext() {
-  //   sliderRef.current.scrollLeft += sliderRef.current.offsetWidth - 300;
-  // }
-  // function slidePrev() {
-  //   sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth - 300;
-  // }
-
-  // useEffect(() => {
-  //   if (sliderRef.current) {
-  //     function scrollHandle() {
-  //       const isEnd = sliderRef.current.scrollLeft + sliderRef.current.offsetWidth === sliderRef.current.scrollWidth;
-  //       const isBegin = sliderRef.current.scrollLeft === 0;
-  //       set_prev(!isBegin);
-  //       set_next(!isEnd);
-  //     }
-  //     scrollHandle();
-  //     sliderRef.current.addEventListener("scroll", scrollHandle);
-  //     return () => {
-  //       sliderRef.current.removeEventListener("scroll", scrollHandle);
-  //     };
-  //   }
-  // }, [sliderRef]);
 
   return (
     <div className={`works ${visible && "visible"}`}>
@@ -74,16 +47,6 @@ export default function Works() {
         })}
       </div>
       <div className="works_slider">
-        {/* {prev && (
-          <button className="slide_btn_1" onClick={slidePrev}>
-            <img src="./prev.png" alt="prev" />
-          </button>
-        )}
-        {next && (
-          <button className="slide_btn_2" onClick={slideNext}>
-            <img src="./next.png" alt="next" />
-          </button>
-        )} */}
         <ScrollContainer className="slider_inner" innerRef={sliderRef}>
           {arr.map((item, index) => {
             return (
@@ -94,7 +57,7 @@ export default function Works() {
                       window.open(item.g);
                     } else window.alert("Github page not found! \nPrivate Project");
                   }}
-                  className="w_image"
+                  className={`w_image`}
                   style={{ backgroundImage: `url(${item.i})` }}
                 />
                 <button
@@ -112,6 +75,10 @@ export default function Works() {
             );
           })}
         </ScrollContainer>
+        <div className="item">
+          <div className="image"></div>
+          <div className="buttons"></div>
+        </div>
       </div>
     </div>
   );
