@@ -30,12 +30,26 @@
 .works_header > .active {
   color: #0f33ff;
 }
+.ix{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
 
 .works_slider {
   display: flex;
   z-index: 1;
   position: relative;
   width: 95%;
+  border: 1px solid red;
+}
+.leftBtn, .rightBtn{
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  border: 1px solid red;
 }
 .slide_btn_1,
 .slide_btn_2 {

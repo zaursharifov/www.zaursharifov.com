@@ -7,7 +7,7 @@ export default function Sidebar({ currentIndex, setCurrentIndex }) {
   return (
     <div className="sidebar">
       {pages.map((item, id) => (
-        <button className="btn" onClick={() => setCurrentIndex(id)}>
+        <button className="btn" key={id} onClick={() => setCurrentIndex(id)}>
           {id === currentIndex ? (
             <>
               <span className="dot">•</span>

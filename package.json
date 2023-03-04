@@ -13,8 +13,7 @@
     "better-react-carousel": "1.1.1",
     "react": "18.2.0",
     "react-indiana-drag-scroll": "2.2.0",
-    "react-scroll-wheel-handler": "^2.2.0",
-    "react-simply-carousel": "^8.5.2",
+    "react-scroll-wheel-handler": "2.2.0",
     "web-vitals": "2.1.4"
   },
   "devDependencies": {
