@@ -20,6 +20,30 @@ export default function Works() {
     set_selected(curcat);
   }
 
+  const [leftElement, setLeftElement] = useState(false);
+  const [rightElement, setRightElement] = useState(false);
+
+  function handleMouseMove(event) {
+    const { clientX } = event;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const halfWidth = rect.width / 2;
+    if (clientX >= rect.left && clientX <= rect.left + halfWidth) {
+      setLeftElement(true);
+      setRightElement(false);
+    } else if (clientX > rect.left + halfWidth && clientX <= rect.right) {
+      setLeftElement(false);
+      setRightElement(true);
+    } else {
+      setLeftElement(false);
+      setRightElement(false);
+    }
+  }
+
+  function handleMouseLeave() {
+    setLeftElement(false);
+    setRightElement(false);
+  }
+
   return (
     <div className={`works ${visible && "visible"}`}>
       <Header />
@@ -48,7 +72,26 @@ export default function Works() {
         })}
       </div>
 
-      <div className={`works_slider `} ref={sliderRef}>
+      <div className={`works_slider `} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+        <div
+          style={{
+            display: "none",
+            width: "50%",
+            backgroundColor: leftElement ? "red" : "blue",
+          }}
+        >
+          {console.log("leftElement", leftElement)}
+        </div>
+        <div
+          style={{
+            display: "none",
+            width: "50%",
+            backgroundColor: rightElement ? "red" : "blue",
+          }}
+        >
+          {console.log("rightElement", rightElement)}
+        </div>
+
         <ScrollContainer className="slider_inner">
           {arr.map((item, index) => {
             return (
