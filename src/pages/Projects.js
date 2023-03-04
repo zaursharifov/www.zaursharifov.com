@@ -1,16 +1,18 @@
-import React, { useRef, useState } from "react";
-import ScrollContainer from "react-indiana-drag-scroll";
+import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import data from "../projects";
 import "../style/projects.css";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 export default function Works() {
   const visible = true;
   const [selected, set_selected] = useState("all");
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
-
   const sliderRef = useRef();
+
+  const [hover, setHover] = useState(false);
+
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
       return newVal.c === curcat;
@@ -50,8 +52,9 @@ export default function Works() {
         <ScrollContainer className="slider_inner" innerRef={sliderRef}>
           {arr.map((item, index) => {
             return (
-              <div key={index} className="w_item">
+              <div key={index} className={`w_item ${hover && "imghover"}`}>
                 <div
+                  onMouseEnter={() => setHover(false)}
                   onDoubleClick={() => {
                     if (item.g !== null) {
                       window.open(item.g);
@@ -61,6 +64,8 @@ export default function Works() {
                   style={{ backgroundImage: `url(${item.i})` }}
                 />
                 <button
+                  onMouseEnter={() => setHover(true)}
+                  onMouseLeave={() => setHover(false)}
                   onClick={() => {
                     if (item.l !== null) {
                       window.open(item.l);
@@ -75,10 +80,6 @@ export default function Works() {
             );
           })}
         </ScrollContainer>
-        <div className="item">
-          <div className="image"></div>
-          <div className="buttons"></div>
-        </div>
       </div>
     </div>
   );

@@ -3,6 +3,9 @@
 #### [☛ www.zaursharifov.com](http://zaursharifov.com)
 
 ## Technologies Used
+react-scroll-wheel-handler - scroll pages
+react-indiana-drag-scroll - old slider for projects
+react-simply-carousel - second slider for projects
 
 - React js
 - Css
