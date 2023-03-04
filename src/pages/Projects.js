@@ -72,25 +72,21 @@ export default function Works() {
         })}
       </div>
 
-      <div className={`works_slider `} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-        <div
+      <div className={`works_slider ${leftElement && "leftBtn"} ${rightElement && "rightBtn"}`} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+        {/* <div
           style={{
             display: "none",
             width: "50%",
             backgroundColor: leftElement ? "red" : "blue",
           }}
-        >
-          {console.log("leftElement", leftElement)}
-        </div>
+        ></div>
         <div
           style={{
             display: "none",
             width: "50%",
             backgroundColor: rightElement ? "red" : "blue",
           }}
-        >
-          {console.log("rightElement", rightElement)}
-        </div>
+        ></div> */}
 
         <ScrollContainer className="slider_inner">
           {arr.map((item, index) => {
