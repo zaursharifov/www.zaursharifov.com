@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import data from "../projects";
 import "../style/projects.css";
@@ -11,6 +11,8 @@ export default function Works() {
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
   const sliderRef = useRef();
+
+  const scrollContainerRef = useRef();
   const [leftElement, setLeftElement] = useState(false);
   const [rightElement, setRightElement] = useState(false);
 
@@ -45,24 +47,6 @@ export default function Works() {
     setLeftElement(false);
     setRightElement(false);
   }
-
-  // useEffect(() => {
-  //   if (scrollContainerRef.current) {
-  //     function scrollHandle() {
-  //       const isEnd = scrollContainerRef.current.scrollLeft + scrollContainerRef.current.offsetWidth === scrollContainerRef.current.scrollWidth;
-  //       const isBegin = scrollContainerRef.current.scrollLeft === 0;
-  //       set_prev(!isBegin);
-  //       set_next(!isEnd);
-  //     }
-  //     scrollHandle();
-  //     scrollContainerRef.current.addEventListener("scroll", scrollHandle);
-  //     return () => {
-  //       scrollContainerRef.current.removeEventListener("scroll", scrollHandle);
-  //     };
-  //   }
-  // }, [scrollContainerRef]);
-
-  const scrollContainerRef = useRef();
 
   function slideNext() {
     scrollContainerRef.current.scrollLeft += scrollContainerRef.current.offsetWidth - 300;

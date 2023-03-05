@@ -11,7 +11,7 @@ export default function Sidebar({ currentIndex, setCurrentIndex }) {
           {id === currentIndex ? (
             <>
               <span className="dot">•</span>
-              <p className="menu_p">{item}</p>
+              <p className="menu_p">{id}</p>
             </>
           ) : (
             <span className="num">{id}</span>
