@@ -9,20 +9,25 @@ import "./style/app.css";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact />];
+  const [focusInput, setFocusInput] = useState(false);
+  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact focusInput={focusInput} setFocusInput={setFocusInput} />];
 
   function nextIndex() {
-    if (currentIndex === pages.length - 1) {
-      return setCurrentIndex(0);
+    if (focusInput !== true) {
+      if (currentIndex === pages.length - 1) {
+        return setCurrentIndex(0);
+      }
+      return setCurrentIndex(currentIndex + 1);
     }
-    return setCurrentIndex(currentIndex + 1);
   }
 
   function prevIndex() {
-    if (currentIndex === 0) {
-      return setCurrentIndex(pages.length - 1);
+    if (focusInput !== true) {
+      if (currentIndex === 0) {
+        return setCurrentIndex(pages.length - 1);
+      }
+      return setCurrentIndex(currentIndex - 1);
     }
-    return setCurrentIndex(currentIndex - 1);
   }
 
   return (

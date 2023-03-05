@@ -3,62 +3,70 @@
   height: calc(490px + 100px);
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: "Montserrat";
+}
+.image {
   background-image: url("https://i.im.ge/2022/08/07/FRRB1K.baku-map-1.png"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: saturation;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   position: relative;
+  width: 70%;
 }
 .pin {
-  z-index: 2;
   position: absolute;
   width: 100px;
   height: 60px;
-  top: 52%;
+  top: 62.5%;
   left: 36.5%;
-  transform: translate(-52%, -36.5%);
+  transform: translate(-62.5%, -36.5%);
   filter: brightness(50%);
 }
 
 .card {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 87%;
-  transform: translate(-87%, -50%);
-  height: 400px;
-  width: 300px;
-  border-radius: 50px;
-  box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  background-color: #0c0c0c;
+  background-color: #000000;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
+}
+.card div {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .card input,
-.card textarea {
+.card .textarea {
   font-family: "Montserrat";
-  border: none;
-  outline: none;
   width: 200px;
   height: 40px;
   font-size: 16px;
-  outline-offset: none;
   padding-left: 5px;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: #535353;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
   color: #ffffff;
-}
-.card textarea{
+  transition: all 0.3s ease-in-out;
+  outline: none;
   resize: none;
-  width: 200px;
-  height: 170px;
+  overflow: hidden;
+}
+.textarea[contenteditable]:empty::before {
+  content: "message";
+  color: #6B6B6B;
+}
+.textarea:focus{
+  border-right: 1px solid #0f33ff;
+  height: 250px;
+}
+.card input:focus,
+input:hover,
+.card .textarea:focus,
+.textarea:hover {
+  border-color: #0f33ff;
 }
