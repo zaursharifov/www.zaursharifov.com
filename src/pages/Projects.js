@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "../components/Header";
 import data from "../projects";
 import "../style/projects.css";
@@ -11,6 +11,11 @@ export default function Works() {
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
   const sliderRef = useRef();
+  const [leftElement, setLeftElement] = useState(false);
+  const [rightElement, setRightElement] = useState(false);
+
+  // const [prev, set_prev] = useState(false);
+  // const [next, set_next] = useState(false);
 
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
@@ -19,9 +24,6 @@ export default function Works() {
     set_arr(newItem);
     set_selected(curcat);
   }
-
-  const [leftElement, setLeftElement] = useState(false);
-  const [rightElement, setRightElement] = useState(false);
 
   function handleMouseMove(event) {
     const { clientX } = event;
@@ -42,6 +44,37 @@ export default function Works() {
   function handleMouseLeave() {
     setLeftElement(false);
     setRightElement(false);
+  }
+
+  // useEffect(() => {
+  //   if (scrollContainerRef.current) {
+  //     function scrollHandle() {
+  //       const isEnd = scrollContainerRef.current.scrollLeft + scrollContainerRef.current.offsetWidth === scrollContainerRef.current.scrollWidth;
+  //       const isBegin = scrollContainerRef.current.scrollLeft === 0;
+  //       set_prev(!isBegin);
+  //       set_next(!isEnd);
+  //     }
+  //     scrollHandle();
+  //     scrollContainerRef.current.addEventListener("scroll", scrollHandle);
+  //     return () => {
+  //       scrollContainerRef.current.removeEventListener("scroll", scrollHandle);
+  //     };
+  //   }
+  // }, [scrollContainerRef]);
+
+  const scrollContainerRef = useRef();
+
+  function slideNext() {
+    scrollContainerRef.current.scrollLeft += scrollContainerRef.current.offsetWidth - 300;
+  }
+
+  function slidePrev() {
+    scrollContainerRef.current.scrollLeft -= scrollContainerRef.current.offsetWidth - 300;
+  }
+
+  function handleArrows() {
+    if (leftElement) slidePrev();
+    else if (rightElement) slideNext();
   }
 
   return (
@@ -73,22 +106,7 @@ export default function Works() {
       </div>
 
       <div className={`works_slider ${leftElement && "leftBtn"} ${rightElement && "rightBtn"}`} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-        {/* <div
-          style={{
-            display: "none",
-            width: "50%",
-            backgroundColor: leftElement ? "red" : "blue",
-          }}
-        ></div>
-        <div
-          style={{
-            display: "none",
-            width: "50%",
-            backgroundColor: rightElement ? "red" : "blue",
-          }}
-        ></div> */}
-
-        <ScrollContainer className="slider_inner">
+        <ScrollContainer className="slider_inner" innerRef={scrollContainerRef} onClick={handleArrows}>
           {arr.map((item, index) => {
             return (
               <div key={index} className={`w_item ${hover && "imghover"}`}>
@@ -123,28 +141,3 @@ export default function Works() {
     </div>
   );
 }
-
-// const [globalMousePos, setGlobalMousePos] = useState({});
-// const [localMousePos, setLocalMousePos] = useState({});
-
-// function handleMouseMove(e) {
-//   const localX = e.clientX - e.target.offsetLeft;
-//   const localY = e.clientY - e.target.offsetTop;
-//   setLocalMousePos({ x: localX, y: localY });
-// }
-
-// useEffect(() => {
-//   function handleMouseMove(e) {
-//     setGlobalMousePos({
-//       x: e.clientX,
-//       y: e.clientY,
-//     });
-//   }
-//   window.addEventListener("mousemove", handleMouseMove);
-//   return () => {
-//     window.removeEventListener("mousemove", handleMouseMove);
-//   };
-// }, []);
-
-// console.log("LOCAL:", localMousePos);
-// console.log("GLOBAL:", globalMousePos);
