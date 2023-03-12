@@ -5,18 +5,6 @@ import "../style/contact.css";
 export default function Contact({ setFocusInput }) {
   const visible = true;
 
-  // const inputRef = useRef();
-
-  // useCallback((inputRef) => {
-  //   if (inputRef !== null) {
-  //     inputRef.current.addEventListener("onfocus", () => setFocusInput(true));
-
-  //     return () => {
-  //       inputRef.current.removeEventListener("onfocus", () => setFocusInput(true));
-  //     };
-  //   }
-  // }, [setFocusInput]);
-
   return (
     <>
       <Header />
