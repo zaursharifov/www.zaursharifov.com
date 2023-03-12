@@ -13,9 +13,7 @@
     "react": "18.2.0",
     "react-indiana-drag-scroll": "2.2.0",
     "react-scroll-wheel-handler": "2.2.0",
-    "web-vitals": "2.1.4",
-    "express": "4.18.2",
-    "nodemailer": "6.9.1"
+    "web-vitals": "2.1.4"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
@@ -24,8 +22,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "nodestart": "node server.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

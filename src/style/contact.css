@@ -34,7 +34,7 @@
   align-items: center;
   gap: 15px;
 }
-.card div {
+/* .card div {
   width: 65%;
   display: flex;
   justify-content: flex-end;
@@ -69,4 +69,4 @@ input:hover,
 .card .textarea:focus,
 .textarea:hover {
   border-color: #0f33ff;
-}
+} */
