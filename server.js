@@ -9,8 +9,8 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  // res.sendFile(__dirname + "/public/index.html");
-  res.sendFile(__dirname, "..", "public", "index.html");
+  res.sendFile(__dirname + "/public/index.html");
+  // res.sendFile(__dirname, "..", "/public", "index.html");
 });
 app.post("/", (req, res) => {
   console.log(req.body);

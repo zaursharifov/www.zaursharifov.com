@@ -10,9 +10,9 @@ export default function Contact({ setFocusInput }) {
 
   function handleSend() {
     let data = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      text: textRef.current.value,
+      name: nameRef.current.innerHTML,
+      email: emailRef.current.innerHTML,
+      text: textRef.current.innerHTML,
     };
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/");
@@ -21,9 +21,9 @@ export default function Contact({ setFocusInput }) {
       console.log(xhr.responseText);
       if (xhr.responseText === "success") {
         alert("email sent");
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        textRef.current.value = "";
+        nameRef.current.innerHTML = "";
+        emailRef.current.innerHTML = "";
+        textRef.current.innerHTML = "";
       } else {
         alert("something wrong");
       }
