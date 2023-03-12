@@ -1,3 +1,4 @@
+import React from 'react';
 function WhatsappIcon({ size }) {
   return (
     <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 30.667 30.667">
