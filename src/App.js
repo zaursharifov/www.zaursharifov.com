@@ -10,7 +10,7 @@ import "./style/app.css";
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [focusInput, setFocusInput] = useState(false);
-  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact focusInput={focusInput} setFocusInput={setFocusInput} />];
+  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact setFocusInput={setFocusInput} />];
 
   function nextIndex() {
     if (focusInput !== true) {

@@ -1,21 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Header from "../components/Header";
 import "../style/contact.css";
 
-export default function Contact({ focusInput, setFocusInput }) {
+export default function Contact({ setFocusInput }) {
   const visible = true;
-  const inputRef = useRef();
 
-  useEffect(()=>{
-    function handleFocus(){
-      setFocusInput(true);
-    }
+  // const inputRef = useRef();
 
-    inputRef.current.addEventListener('onfocus',handleFocus);
-    return()=>{
-      inputRef.current.removeEventListener('onfocus',handleFocus);
-    }
-  },[])
+  // useCallback((inputRef) => {
+  //   if (inputRef !== null) {
+  //     inputRef.current.addEventListener("onfocus", () => setFocusInput(true));
+
+  //     return () => {
+  //       inputRef.current.removeEventListener("onfocus", () => setFocusInput(true));
+  //     };
+  //   }
+  // }, [setFocusInput]);
 
   return (
     <>
@@ -25,8 +25,8 @@ export default function Contact({ focusInput, setFocusInput }) {
           <img className="pin" src="./about/maps/circle.png" alt="pin" />
         </div>
         <div className="card" id="mail">
-          <input type="text" placeholder="name" ref={inputRef} />
-          <span class="textarea" role="textbox" contenteditable="true"></span>
+          <input type="text" placeholder="name" onFocus={() => setFocusInput(true)} onMouseLeave={() => setFocusInput(false)} />
+          <span class="textarea" role="textbox" contenteditable="true" onFocus={() => setFocusInput(true)} onMouseLeave={() => setFocusInput(false)} />
           <div>
             <button type="submit" className="a_btn">
               SEND <span className="span">→</span>
