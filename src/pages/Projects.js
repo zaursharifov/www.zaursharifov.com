@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Icon } from "../components/Icons";
 import ScrollContainer from "react-indiana-drag-scroll";
 import Header from "../components/Header";
 import data from "../projects";
@@ -89,29 +90,32 @@ export default function Works() {
           {arr.map((item, index) => {
             return (
               <div key={index} className={`projects-item ${hover && "project-hover"}`}>
-                <div
-                  onMouseEnter={() => setHover(false)}
-                  onDoubleClick={() => {
-                    if (item.g !== null) {
-                      window.open(item.g);
-                    } else window.alert("Github page not found! \nPrivate Project");
-                  }}
-                  className={`project-img`}
-                  style={{ backgroundImage: `url(${item.i})` }}
-                />
-                <button
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                  onClick={() => {
-                    if (item.l !== null) {
-                      window.open(item.l);
-                    } else window.alert("Live version not found!");
-                  }}
-                  className="project-link"
-                >
+                <div className="project-img" onMouseEnter={() => setHover(false)} style={{ backgroundImage: `url(${item.i})` }} />
+                <div className="project-link" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                   <h2>{item.a}</h2>
-                  <p>→</p>
-                </button>
+                  <div>
+                    <button
+                      target={"_blank"}
+                      onClick={() => {
+                        if (item.g !== null) {
+                          window.open(item.g);
+                        } else window.alert("Private Project");
+                      }}
+                    >
+                      <Icon name={"github"} size={20} />
+                    </button>
+                    <button
+                      target={"_blank"}
+                      onClick={() => {
+                        if (item.l !== null) {
+                          window.open(item.l);
+                        } else window.alert("Live version not found!");
+                      }}
+                    >
+                      <Icon name={"link"} size={20} />
+                    </button>
+                  </div>
+                </div>
               </div>
             );
           })}

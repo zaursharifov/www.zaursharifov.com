@@ -8,7 +8,6 @@ react-indiana-drag-scroll - old slider for projects
 
 - React js
 - Css
-- Material ui icons
 
 #### Color palette:
 

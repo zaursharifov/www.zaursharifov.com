@@ -238,9 +238,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.contact-links div a:hover{
+.contact-links div a:hover {
   transform: scale(1.1);
   background-color: #0f33ff;
 }
@@ -307,10 +307,10 @@ body {
 .project-hover:hover .project-img {
   background-position: bottom;
 }
-.slide-left{
+.slide-left {
   cursor: url("./assets/arrow-left.png"), grab;
 }
-.slide-right{
+.slide-right {
   cursor: url("./assets/arrow-right.png"), grab;
 }
 
@@ -325,20 +325,26 @@ body {
   color: #ffffff;
   border: none;
 }
-.project-link > p {
-  font-family: "Montserrat";
-  font-size: 18px;
-  font-weight: 300;
-}
-.project-link:hover > p {
-  color: #0f33ff;
-  transition: color 500ms;
-}
 .project-link h2 {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
+}
+.project-link div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-link button {
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.project-link button:hover {
+  color: #0f33ff;
 }
 
 @media only screen and (max-width: 912px) {
