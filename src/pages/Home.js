@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import "../style/app.css";
 import "../style/home.css";
 
-export default function Home({ setCurrentIndex }) {
+export default function Home() {
   const visible = true;
   return (
     <div className={`home ${visible && "visible"}`}>
@@ -11,11 +11,11 @@ export default function Home({ setCurrentIndex }) {
       <div className="home-top">
         <div>
           <h1>Jr. Full Stack Developer</h1>
-          <a href="./about/cv_zaursharifov.pdf" target={"_blank"}>
+          <a href="./assets/cv_zaursharifov.pdf" target={"_blank"}>
             RESUME →
           </a>
         </div>
-        <img src="./about/astronaut.png" alt="astronaut" />
+        <img src="./assets/astronaut.png" alt="astronaut" />
       </div>
       <div className="home-line"></div>
       <div className="home-bottom">

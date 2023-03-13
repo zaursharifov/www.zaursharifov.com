@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { Icon } from "../components/Icons";
 import "../style/contact.css";
 
-export default function Contact({ setFocusInput }) {
+export default function Contact() {
   const visible = true;
 
   return (
@@ -11,7 +11,7 @@ export default function Contact({ setFocusInput }) {
       <Header />
       <div className={`contact ${visible && "visible"}`}>
         <div className="image">
-          <img className="pin" src="./about/maps/circle.png" alt="pin" />
+          <img className="pin" src="./assets/circle.png" alt="pin" />
         </div>
         <div className="links-container">
           <div className="links">

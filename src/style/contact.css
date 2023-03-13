@@ -45,39 +45,3 @@
   gap: 5px;
   overflow: hidden;
 }
-/* .card div {
-  width: 65%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.card input,
-.card .textarea {
-  font-family: "Montserrat";
-  width: 200px;
-  height: 40px;
-  font-size: 16px;
-  padding-left: 5px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #ffffff;
-  color: #ffffff;
-  transition: all 0.3s ease-in-out;
-  outline: none;
-  resize: none;
-  overflow: hidden;
-}
-.textarea[contenteditable]:empty::before {
-  content: "message";
-  color: #6B6B6B;
-}
-.textarea:focus{
-  border-right: 1px solid #0f33ff;
-  height: 250px;
-}
-.card input:focus,
-input:hover,
-.card .textarea:focus,
-.textarea:hover {
-  border-color: #0f33ff;
-} */

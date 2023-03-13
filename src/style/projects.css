@@ -38,10 +38,10 @@
   width: 95%;
 }
 .leftBtn{
-  cursor: url("../../public/left.png"), grab;
+  cursor: url("../../public/assets/arrow-left.png"), grab;
 }
 .rightBtn{
-  cursor: url("../../public/right.png"), grab;
+  cursor: url("../../public/assets/arrow-right.png"), grab;
 }
 
 .slide_btn_1,

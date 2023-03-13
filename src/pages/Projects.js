@@ -11,13 +11,9 @@ export default function Works() {
   const [arr, set_arr] = useState(data);
   const items = [...new Set(data.map((val) => val.c))];
   const sliderRef = useRef();
-
   const scrollContainerRef = useRef();
   const [leftElement, setLeftElement] = useState(false);
   const [rightElement, setRightElement] = useState(false);
-
-  // const [prev, set_prev] = useState(false);
-  // const [next, set_next] = useState(false);
 
   function filterItem(curcat) {
     const newItem = data.filter((newVal) => {
