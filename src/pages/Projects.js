@@ -4,7 +4,7 @@ import ScrollContainer from "react-indiana-drag-scroll";
 import Header from "../components/Header";
 import data from "../projects";
 
-export default function Works() {
+export default function Projects({ mobile }) {
   const visible = true;
   const [hover, setHover] = useState(false);
   const [selected, set_selected] = useState("all");
@@ -59,7 +59,7 @@ export default function Works() {
 
   return (
     <div className={`projects ${visible && "visible"}`}>
-      <Header />
+      {mobile ? <Header /> : null}
       <div className="projects-header">
         <button
           onClick={() => {

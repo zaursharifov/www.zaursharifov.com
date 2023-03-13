@@ -9,7 +9,7 @@ import Mobile from "./pages/Mobile";
 export default function App() {
   const [mobile, setMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const pages = [<Home />, <Projects />, <Contact />];
+  const pages = [<Home />, <Projects mobile={mobile} />, <Contact />];
 
   function nextIndex() {
     if (currentIndex === pages.length - 1) {

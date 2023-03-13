@@ -104,7 +104,7 @@ body {
   margin-bottom: 60px;
   cursor: default;
 }
-.home-top .resume-btn {
+.resume-btn {
   font-family: "Montserrat";
   text-decoration: none;
   background-color: transparent;
@@ -117,7 +117,7 @@ body {
   cursor: pointer;
   position: relative;
 }
-.home-top .resume-btn::after {
+.resume-btn::after {
   z-index: -1;
   position: absolute;
   content: "\00a0";
@@ -127,7 +127,7 @@ body {
   top: 0;
   right: 0;
 }
-.home-top .resume-btn:hover::after {
+.resume-btn:hover::after {
   width: 80px;
   transition: all 300ms ease-in-out;
 }
@@ -228,7 +228,7 @@ body {
   gap: 5px;
   overflow: hidden;
 }
-.contact-links div a {
+.icon-btn {
   text-decoration: none;
   background-color: #131313;
   color: #dedede;
@@ -240,7 +240,7 @@ body {
   gap: 5px;
   transition: all 0.3s ease-in-out;
 }
-.contact-links div a:hover {
+.icon-btn:hover {
   transform: scale(1.1);
   background-color: #0f33ff;
 }
@@ -366,14 +366,9 @@ body {
   color: #ffffff;
 }
 .m-home,
-.m-projects,
-.m-contact {
+.m-projects {
   width: 80%;
   margin: 50px auto;
-}
-.m_contact {
-  display: flex;
-  justify-content: center;
 }
 .m-header {
   z-index: 1;
@@ -384,46 +379,37 @@ body {
   margin: 0 auto;
   background-color: #0c0c0c;
 }
-.mh_h1 {
-  font-size: 38px;
-  font-weight: 900;
-  margin-bottom: 60px;
-  cursor: default;
-}
 .m-line::before {
   width: 20px;
 }
 .m-line {
   margin: 20px 0;
 }
-.b_section {
+.home-section {
   display: flex;
   flex-direction: column;
 }
-.b_section > h2,
-.b_section > p {
+.home-section > h2,
+.home-section > p {
   line-height: 0;
 }
-.b_section > h2 {
+.home-section > h2 {
   margin-top: 30px;
+  margin-bottom: 6px;
 }
-
-.ma_h1 {
-  font-size: 38px;
-  font-weight: 900;
-  cursor: default;
-}
-
-.m_card {
-  height: 300px;
-  width: 300px;
+.m-contact {
+  margin-top: -260px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.5);
-  background-color: #0c0c0c;
+}
+.m-contact div{
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
