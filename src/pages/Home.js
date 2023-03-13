@@ -9,7 +9,7 @@ export default function Home() {
       <div className="home-top">
         <div>
           <h1>Jr. Full Stack Developer</h1>
-          <a href="./assets/cv_zaursharifov.pdf" target={"_blank"}>
+          <a className="resume-btn" href="./assets/cv_zaursharifov.pdf" target={"_blank"}>
             RESUME →
           </a>
         </div>
