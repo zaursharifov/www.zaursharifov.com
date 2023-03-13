@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import { Icon } from "../components/Icons";
-import "../style/contact.css";
 
 export default function Contact() {
   const visible = true;
@@ -10,11 +9,11 @@ export default function Contact() {
     <>
       <Header />
       <div className={`contact ${visible && "visible"}`}>
-        <div className="image">
-          <img className="pin" src="./assets/circle.png" alt="pin" />
+        <div className="contact-img">
+          <img className="contact-pin" src="./assets/circle.png" alt="pin" />
         </div>
-        <div className="links-container">
-          <div className="links">
+        <div className="contact-links">
+          <div>
             <a href="https://www.linkedin.com/in/zaursharifov-404/" className="a_img" target="_blank" rel="noreferrer">
               <Icon name={"linkedin"} size={34} />
             </a>

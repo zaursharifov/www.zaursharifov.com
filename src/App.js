@@ -4,7 +4,6 @@ import Sidebar from "./components/SideBar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import "./style/app.css";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);

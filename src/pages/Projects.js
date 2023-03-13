@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
+import ScrollContainer from "react-indiana-drag-scroll";
 import Header from "../components/Header";
 import data from "../projects";
-import "../style/projects.css";
-import ScrollContainer from "react-indiana-drag-scroll";
 
 export default function Works() {
   const visible = true;
@@ -58,9 +57,9 @@ export default function Works() {
   }
 
   return (
-    <div className={`works ${visible && "visible"}`}>
+    <div className={`projects ${visible && "visible"}`}>
       <Header />
-      <div className="works_header">
+      <div className="projects-header">
         <button
           onClick={() => {
             set_arr(data);
@@ -85,11 +84,11 @@ export default function Works() {
         })}
       </div>
 
-      <div className={`works_slider ${leftElement && "leftBtn"} ${rightElement && "rightBtn"}`} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-        <ScrollContainer className="slider_inner" innerRef={scrollContainerRef} onClick={handleArrows}>
+      <div className={`projects-slider ${leftElement && "slide-left"} ${rightElement && "slide-right"}`} ref={sliderRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+        <ScrollContainer className="slider-inner" innerRef={scrollContainerRef} onClick={handleArrows}>
           {arr.map((item, index) => {
             return (
-              <div key={index} className={`w_item ${hover && "imghover"}`}>
+              <div key={index} className={`projects-item ${hover && "project-hover"}`}>
                 <div
                   onMouseEnter={() => setHover(false)}
                   onDoubleClick={() => {
@@ -97,7 +96,7 @@ export default function Works() {
                       window.open(item.g);
                     } else window.alert("Github page not found! \nPrivate Project");
                   }}
-                  className={`w_image`}
+                  className={`project-img`}
                   style={{ backgroundImage: `url(${item.i})` }}
                 />
                 <button
@@ -108,7 +107,7 @@ export default function Works() {
                       window.open(item.l);
                     } else window.alert("Live version not found!");
                   }}
-                  className="w_btns"
+                  className="project-link"
                 >
                   <h2>{item.a}</h2>
                   <p>→</p>

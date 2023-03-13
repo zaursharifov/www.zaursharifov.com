@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import "../style/app.css";
-import "../style/home.css";
 
 export default function Home() {
   const visible = true;
