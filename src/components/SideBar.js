@@ -2,7 +2,7 @@ import React from "react";
 import "../style/sidebar.css";
 
 export default function Sidebar({ currentIndex, setCurrentIndex }) {
-  const pages = ["Home", "Projects", "About", "Contact"];
+  const pages = ["Home", "Projects", "Contact"];
 
   return (
     <div className="sidebar">

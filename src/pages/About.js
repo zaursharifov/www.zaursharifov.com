@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "../components/Icons";
 import Header from "../components/Header";
 import "../style/home.css";
 
@@ -20,7 +19,7 @@ export default function About() {
           </a>
         </div>
         <div className="a_bottom">
-          
+
         </div>
       </div>
     </div>

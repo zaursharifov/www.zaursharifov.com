@@ -3,14 +3,13 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import Sidebar from "./components/SideBar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./style/app.css";
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [focusInput, setFocusInput] = useState(false);
-  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <About />, <Contact setFocusInput={setFocusInput} />];
+  const pages = [<Home setCurrentIndex={setCurrentIndex} />, <Projects />, <Contact setFocusInput={setFocusInput} />];
 
   function nextIndex() {
     if (focusInput !== true) {

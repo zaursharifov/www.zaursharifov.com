@@ -3,15 +3,17 @@ import Header from "../components/Header";
 import "../style/app.css";
 import "../style/home.css";
 
-export default function Home({setCurrentIndex}) {
+export default function Home({ setCurrentIndex }) {
   const visible = true;
   return (
     <div className={`home ${visible && "visible"}`}>
       <Header />
       <div className="top">
         <div>
-          <h1 className="h_h1">Creative websites for your brand</h1>
-          <button className="h_btn" onClick={()=> setCurrentIndex(3)}>CONTACT ME →</button>
+          <h1 className="h_h1">Jr. Full Stack Developer</h1>
+          <a className="h_btn" href="./about/cv_zaursharifov.pdf" target={"_blank"}>
+            RESUME →
+          </a>
         </div>
         <img className="h_img" src="./about/home.png" alt="home_png" />
       </div>
