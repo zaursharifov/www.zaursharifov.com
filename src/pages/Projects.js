@@ -59,7 +59,7 @@ export default function Projects({ mobile }) {
 
   return (
     <div className={`projects ${visible && "visible"}`}>
-      {mobile ? <Header /> : null}
+      {mobile ? null : <Header />}
       <div className="projects-header">
         <button
           onClick={() => {
