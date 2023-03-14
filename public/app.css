@@ -183,7 +183,7 @@ body {
 /* Contact */
 .contact {
   max-width: 1200px;
-  height: calc(490px + 100px);
+  height: 490px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -203,9 +203,9 @@ body {
   position: absolute;
   width: 100px;
   height: 60px;
-  top: 62.5%;
-  left: 36.5%;
-  transform: translate(-62.5%, -36.5%);
+  top: 60%;
+  left: 37.5%;
+  transform: translate(-60%, -37.5%);
   filter: brightness(50%);
 }
 
