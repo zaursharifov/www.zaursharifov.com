@@ -6,12 +6,13 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat"],
       },
-      colors:{
-        'bgColor': "#0c0c0c",
-        "textColor0": "#ffffff",
-        "textColor1": "#272727",
-        "lineColor": "#535353"
-      }
+      colors: {
+        bgColor: "#0c0c0c",
+        textColor0: "#ffffff",
+        textColor1: "#272727",
+        lineColor: "#535353",
+        blue: "#0F33FF",
+      },
     },
   },
   plugins: [],
