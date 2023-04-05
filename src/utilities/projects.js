@@ -1,25 +1,28 @@
 const data = [
   {
-    i: "/assets/works/gerdabutter.png",
-    l: "https://gerdabutter.com",
-    g: null,
-    a: "Gerda Butter",
-    c: "Websites",
+    image: "/assets/works/gerdabutter.png",
+    live: "https://gerdabutter.com",
+    github: null,
+    name: "Gerda Butter",
+    tech: ["Html", "React Js", "Css"],
+    status: 1,
   },
 
   {
-    i: "/assets/works/html_css_javascript.png",
-    l: "https://zeracodes.github.io/html-css-javascript/",
-    g: "https://github.com/zeracodes/html-css-javascript",
-    a: "Basic Projects",
-    c: "Websites",
+    image: "/assets/works/html_css_javascript.png",
+    live: "https://zeracodes.github.io/html-css-javascript/",
+    github: "https://github.com/zeracodes/html-css-javascript",
+    name: "Basic Projects",
+    tech: ["Html", "React Js", "Css"],
+    status: 2,
   },
   {
-    i: "/assets/works/turaz.png",
-    l: "https://turaz.bitsody.com",
-    g: null,
-    a: "Turaz dictianory by Bitsody",
-    c: "Mobile Applications",
+    image: "/assets/works/turaz.png",
+    live: "https://turaz.bitsody.com",
+    github: null,
+    name: "Turaz dictianory by Bitsody",
+    tech: ["React Native"],
+    status: 1,
   },
 ];
 
