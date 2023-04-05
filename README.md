@@ -1,4 +1,3 @@
-## Portfolio v1-old
 [www.zaursharifov.com](http://zaursharifov.com)
 
 ## Color Reference
