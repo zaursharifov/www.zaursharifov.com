@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
+import Contact from "./Contact";
 
 export default function Home() {
   const visible = true;
   return (
     <div className={`home ${visible && "visible"}`}>
-      <Header />
       <div className="home-top">
         <div>
           <h1>Jr. Full Stack Developer</h1>
@@ -13,7 +12,9 @@ export default function Home() {
             RESUME →
           </a>
         </div>
-        <img src="./assets/astronaut.png" alt="astronaut" />
+        <div className="contact">
+          <Contact />
+        </div>
       </div>
       <div className="home-line"></div>
       <div className="home-bottom">

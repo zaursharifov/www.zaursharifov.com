@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bg: #0c0c0c;
+  --blue: #0f33ff;
+  --line: #535353;
+  --text-1: #ffffff;
+  --text-2: #272727;
+}
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--text-1);
+}
+.app {
+  width: 1000px;
+  margin: 0 auto;
+  height: auto;
+}
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--bg);
+}
+.navbar h1 {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+/* Header */
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.header-inner {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.resume-btn {
+  font-family: "Montserrat";
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.4px;
+  padding: 7px 15px;
+  cursor: pointer;
+  position: relative;
+}
+.resume-btn::after {
+  z-index: -1;
+  position: absolute;
+  content: "\00a0";
+  background-color: #0f33ff;
+  width: 50px;
+  padding: 5px 15px;
+  top: 0;
+  right: 0;
+}
+.resume-btn:hover::after {
+  width: 80px;
+  transition: all 300ms ease-in-out;
+}
+.line::before {
+  position: absolute;
+  content: "\00a0";
+  height: 3px;
+  width: 40px;
+  background-color: var(--blue);
+  left: 1%;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-2);
+  position: relative;
+  margin-top: 20px;
+}
+.contact {
+  display: flex;
+  gap: 10px;
+}
+.contact-item {
+  color: var(--text-1);
+}
+.contact-item:hover {
+  transition: color 300ms ease-in-out;
+  color: var(--blue);
+}
+/* About */
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-item {
+  color: #272727;
+  cursor: default;
+}
+.about-item:hover {
+  transition: color 300ms ease-in-out;
+  color: #ffffff;
+}
+.about-item > h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+  margin-bottom: -10px;
+}
+.about-item > p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+/* Projects */
+.projects {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+.project-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.project-info {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: end;
+}
+.project-info ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  color: var(--line);
+}
+.project-text {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  padding-left: 40px;
+  background-color: var(--text-2);
+  border-radius: 6px;
+}
+.project-img {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  transition: 4s all;
+  background-size: cover;
+}
+.project-img:hover{
+  cursor: pointer;
+  background-position: bottom;
+}
+@media only screen and (max-width: 712px) {
+  .app {
+    width: 280px;
+    height: auto;
+    border: 1px solid green;
+  }
+  .header-inner {
+    margin-top: 15px;
+    height: auto;
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .resume-btn {
+    padding: 0px;
+  }
+  .resume-btn::after {
+    display: none;
+  }
+  .about {
+    margin-top: 5px;
+    height: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
