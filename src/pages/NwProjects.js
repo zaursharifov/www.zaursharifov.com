@@ -20,12 +20,10 @@ export default function NwProjects() {
                 ))}
               </div>
               <div className="project-links">
-                {item.github && (
-                  <a href={item.github} target="_blank" rel="noreferrer">
-                    <Icon name="github" size={23} />
-                  </a>
-                )}
-                <a href={item.live} target="_blank" rel="noreferrer">
+                <a href={item.github} target="_blank" rel="noreferrer" className={item.github || `disabled`}>
+                  <Icon name="github" size={23} />
+                </a>
+                <a href={item.live} target="_blank" rel="noreferrer" className={item.live || `disabled`}>
                   <Icon name="link" size={23} />
                 </a>
               </div>
