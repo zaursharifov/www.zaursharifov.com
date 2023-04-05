@@ -10,7 +10,6 @@ export default function App() {
         <h1>Zaur Sharifov</h1>
       </div>
       <Header />
-      <h2>Featured Projects</h2>
       <Projects />
     </div>
   );

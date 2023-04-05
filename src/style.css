@@ -147,32 +147,30 @@ body {
   gap: 50px;
   margin-bottom: 60px;
 }
-.project-item {
+.project-item,
+.project-item-2 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.project-item-2{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-.project-info {
+.project-info,
+.project-info-2 {
   width: 500px;
-  height: 300px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
   text-align: end;
+  z-index: 2;
 }
 .project-tech {
-  list-style-type: none;
   display: flex;
   gap: 20px;
   color: var(--line);
 }
-.project-text {
+.project-text,
+.project-text-2 {
   width: 100%;
   height: auto;
   padding: 20px;
@@ -186,28 +184,39 @@ body {
   border-radius: 20px;
   transition: 4s all;
   background-size: cover;
-} 
-.project-img:hover{
+}
+.project-img:hover {
   cursor: pointer;
   background-position: bottom;
 }
-.project-links{
+.project-links {
   display: flex;
   gap: 10px;
 }
-.project-links a{
+.project-links a {
   color: var(--text-1);
   transition: color 300ms ease-in-out;
   cursor: pointer;
 }
-.project-links a:hover{
+.project-links a:hover {
   color: var(--blue);
 }
+.project-item-2 {
+  flex-direction: row-reverse;
+}
+.project-info-2 {
+  align-items: flex-start;
+  text-align: start;
+}
+.project-text-2 {
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
 @media only screen and (max-width: 712px) {
   .app {
     width: 280px;
     height: auto;
-    border: 1px solid green;
   }
   .header-inner {
     margin-top: 15px;
@@ -227,5 +236,53 @@ body {
     height: 150px;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .project-header {
+    margin-top: 100px;
+  }
+  .project-item,
+  .project-item-2 {
+    width: 270px;
+    position: relative;
+    flex-direction: row;
+  }
+  .project-img {
+    width: 270px;
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .project-info,
+  .project-info-2 {
+    border-radius: 20px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 12px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 15px;
+    text-align: start;
+  }
+  .project-text,
+  .project-text-2 {
+    padding: 0;
+    align-items: flex-start;
+    text-align: start;
+    background-color: transparent;
+    color: var(--text-1);
+  }
+  .project-tech {
+    color: var(--text-1);
   }
 }
