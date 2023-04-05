@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "../components/Icons";
+import { Icon } from "./Icons";
 
 export default function Contact() {
   return (

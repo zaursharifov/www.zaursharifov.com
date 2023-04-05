@@ -140,7 +140,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  text-align: end;
+  text-align: justify;
   z-index: 2;
 }
 .project-tech {
@@ -185,7 +185,6 @@ body {
 }
 .project-info-2 {
   align-items: flex-start;
-  text-align: start;
 }
 .project-text-2 {
   padding-left: 20px;
@@ -241,11 +240,17 @@ body {
     align-items: flex-start;
     flex-direction: column;
   }
+  .header-text{
+    font-size: 14px;
+  }
   .resume-btn {
     padding: 0px;
   }
   .resume-btn::after {
     display: none;
+  }
+  .line {
+    margin-top: 20px;
   }
   .project-header {
     margin-top: 100px;
@@ -282,13 +287,11 @@ body {
     align-items: flex-start;
     justify-content: center;
     padding-left: 15px;
-    text-align: start;
   }
   .project-text,
   .project-text-2 {
     padding: 0;
     align-items: flex-start;
-    text-align: start;
     background-color: transparent;
     color: var(--text-1);
   }
