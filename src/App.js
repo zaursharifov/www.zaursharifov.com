@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./pages/Header";
 import "./style.css";
 import Projects from "./pages/Projects";
+import NwProjects from "./pages/NwProjects";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       </div>
       <Header />
       <Projects />
+      <NwProjects />
     </div>
   );
 }

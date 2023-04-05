@@ -212,7 +212,39 @@ body {
   padding-left: 20px;
   padding-right: 40px;
 }
-
+/* Nw Projects */
+.nwprojects{
+  width: 100%;
+  height: auto;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+.nwp-item{
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--text-2);
+  border-radius: 10px;
+  padding: 0px 15px;
+}
+.nwp-item:hover{
+  background-color: #1a1a1a;
+}
+.nwp-info{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nwp-tech{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--line);
+}
 @media only screen and (max-width: 712px) {
   .app {
     width: 280px;
