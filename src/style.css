@@ -2,6 +2,7 @@
 :root {
   --bg: #0c0c0c;
   --blue: #0f33ff;
+  --blue-2: #161616;
   --line: #535353;
   --text-1: #ffffff;
   --text-2: #272727;
@@ -54,7 +55,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+}
+.header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 .resume-btn {
   font-family: "Montserrat";
@@ -96,7 +104,6 @@ body {
   height: 1px;
   background-color: var(--text-2);
   position: relative;
-  margin-top: 20px;
 }
 .contact {
   display: flex;
@@ -109,34 +116,6 @@ body {
   transition: color 300ms ease-in-out;
   color: var(--blue);
 }
-/* About */
-.about {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.about-item {
-  color: #272727;
-  cursor: default;
-}
-.about-item:hover {
-  transition: color 300ms ease-in-out;
-  color: #ffffff;
-}
-.about-item > h2 {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 25.6px;
-  margin-bottom: -10px;
-}
-.about-item > p {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22.4px;
-}
-
 /* Projects */
 .projects {
   width: 100%;
@@ -175,7 +154,7 @@ body {
   height: auto;
   padding: 20px;
   padding-left: 40px;
-  background-color: var(--text-2);
+  background-color: var(--blue-2);
   border-radius: 6px;
 }
 .project-img {
@@ -213,7 +192,7 @@ body {
   padding-right: 40px;
 }
 /* Nw Projects */
-.nwprojects{
+.nwprojects {
   width: 100%;
   height: auto;
   cursor: default;
@@ -222,7 +201,7 @@ body {
   gap: 10px;
   margin-bottom: 60px;
 }
-.nwp-item{
+.nwp-item {
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -232,21 +211,21 @@ body {
   padding: 0px 15px;
 }
 
-.nwp-item:hover{
+.nwp-item:hover {
   background-color: #1a1a1a;
 }
-.nwp-info{
+.nwp-info {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.nwp-tech{
+.nwp-tech {
   display: flex;
   align-items: center;
   gap: 20px;
   color: var(--line);
 }
-.nwp-header{
+.nwp-header {
   color: var(--text-1);
   text-decoration: none;
 }
@@ -267,12 +246,6 @@ body {
   }
   .resume-btn::after {
     display: none;
-  }
-  .about {
-    margin-top: 5px;
-    height: 150px;
-    flex-direction: column;
-    align-items: flex-start;
   }
   .project-header {
     margin-top: 100px;
@@ -322,7 +295,7 @@ body {
   .project-tech {
     color: var(--text-1);
   }
-  .nwp-tech{
+  .nwp-tech {
     display: none;
   }
 }
