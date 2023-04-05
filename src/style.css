@@ -231,6 +231,7 @@ body {
   border-radius: 10px;
   padding: 0px 15px;
 }
+
 .nwp-item:hover{
   background-color: #1a1a1a;
 }
@@ -244,6 +245,10 @@ body {
   align-items: center;
   gap: 20px;
   color: var(--line);
+}
+.nwp-header{
+  color: var(--text-1);
+  text-decoration: none;
 }
 @media only screen and (max-width: 712px) {
   .app {
@@ -316,5 +321,8 @@ body {
   }
   .project-tech {
     color: var(--text-1);
+  }
+  .nwp-tech{
+    display: none;
   }
 }
