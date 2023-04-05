@@ -1,20 +1,26 @@
 const data = [
   {
+    live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-3/index.html",
+    github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-3",
+    name: "Portfolio v3",
+    tech: ["React Js", "Css"],
+  },
+  {
     live: null,
     github: "https://github.com/zeraphosa/waste-recognition-system",
     name: "Waste Recognition System",
     tech: ["Html", "Tailwindcss", "React Native", "Python"],
   },
   {
-    live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-1/index.html",
-    github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-1",
-    name: "Portfolio v1",
+    live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-2/index.html",
+    github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-2",
+    name: "Portfolio v2",
     tech: ["Html", "Css", "Javascript"],
   },
   {
-    live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-0/index.html",
-    github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-0",
-    name: "Portfolio v0",
+    live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-1/index.html",
+    github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-1",
+    name: "Portfolio v1",
     tech: ["Html", "Css", "Javascript"],
   },
   {
