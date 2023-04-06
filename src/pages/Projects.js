@@ -15,9 +15,7 @@ export default function Projects() {
             </a>
             <div className={item.status === 1 ? `project-info` : `project-info-2`}>
               <h3>{item.name}</h3>
-              <p className={item.status === 1 ? "project-text" : "project-text-2"}>
-                {item.text}
-              </p>
+              <p className={item.status === 1 ? "project-text" : "project-text-2"}>{item.text}</p>
               <div className="project-tech">
                 {item.tech.map((item, id) => (
                   <p key={id}>{item}</p>
@@ -29,9 +27,11 @@ export default function Projects() {
                     <Icon name="github" size={23} />
                   </a>
                 )}
-                <a href={item.live} target="_blank" rel="noreferrer">
-                  <Icon name="link" size={23} />
-                </a>
+                {item.live && (
+                  <a href={item.live} target="_blank" rel="noreferrer">
+                    <Icon name="link" size={23} />
+                  </a>
+                )}
               </div>
             </div>
           </div>

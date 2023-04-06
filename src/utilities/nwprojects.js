@@ -6,12 +6,6 @@ const data = [
     tech: ["React Js", "Css"],
   },
   {
-    live: null,
-    github: "https://github.com/zeraphosa/waste-recognition-system",
-    name: "Waste Recognition System",
-    tech: ["Html", "Tailwindcss", "React Native", "Python"],
-  },
-  {
     live: "https://zeracodes.github.io/html-css-javascript/projects/portfolio-template-2/index.html",
     github: "https://github.com/zeracodes/html-css-javascript/tree/main/projects/portfolio-template-2",
     name: "Portfolio v2",
@@ -44,7 +38,7 @@ const data = [
   {
     live: null,
     github: "https://github.com/zeracodes/university-projects",
-    name: "University tasks",
+    name: "University projects",
     tech: ["C#","Asp .NET", "Python", "MySql"],
   },
 ];
