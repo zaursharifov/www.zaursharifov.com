@@ -106,11 +106,12 @@ body {
   position: relative;
 }
 .contact {
-  display: flex;
-  gap: 10px;
+  display: inline-block;
 }
 .contact-item {
-  color: var(--text-1);
+  margin-right: 10px;
+  height: 30px;
+  color: #ffffff;
 }
 .contact-item:hover {
   transition: color 300ms ease-in-out;
