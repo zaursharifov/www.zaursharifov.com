@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./pages/Header";
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import NwProjects from "./components/NwProjects";
 import "./style.css";
-import Projects from "./pages/Projects";
-import NwProjects from "./pages/NwProjects";
 
 export default function App() {
   return (

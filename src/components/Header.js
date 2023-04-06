@@ -1,4 +1,4 @@
-import Contact from "../components/Contact";
+import Contact from "./Contact";
 
 export default function Header() {
   return (

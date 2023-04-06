@@ -1,4 +1,4 @@
-import { Icon } from "../components/Icons";
+import { Icon } from "./Icons";
 import data from "../utilities/nwprojects";
 
 export default function NwProjects() {
@@ -9,7 +9,7 @@ export default function NwProjects() {
         {data.map((item, id) => (
           <div key={id} className="nwp-item">
             <h4>
-              <a className="nwp-header" href="/" target="_blank" rel="noreferrer">
+              <a className="nwp-header" href={item.live ? item.live : item.github} target="_blank" rel="noreferrer">
                 {item.name}
               </a>
             </h4>

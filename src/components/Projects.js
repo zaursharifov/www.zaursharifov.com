@@ -1,5 +1,5 @@
 import data from "../utilities/projects";
-import { Icon } from "../components/Icons";
+import { Icon } from "./Icons";
 
 export default function Projects() {
   return (
@@ -8,7 +8,7 @@ export default function Projects() {
       <div className="projects">
         {data.map((item, id) => (
           <div className={item.status === 1 ? `project-item` : `project-item-2`} key={id}>
-            <a href={item.live}>
+            <a href={item.live ? item.live : item.github}>
               <div className="project-img" style={{ backgroundImage: `url(${item.image})` }}>
                 <div className="overlay"></div>
               </div>
