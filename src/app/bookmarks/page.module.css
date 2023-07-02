@@ -6,6 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 40px;
 }
 .button {
   border: none;
@@ -13,4 +14,28 @@
   color: #cacaca;
   padding: 7px 14px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+}
+.button:hover {
+  color: #fff;
+}
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.item {
+  background-color: #262626;
+  border-radius: 5px;
+  padding: 7px 14px;
+  color: #cacaca;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item span:last-child {
+  font-size: 0.8em;
 }
