@@ -1,0 +1,16 @@
+.bookmarks {
+  width: 100%;
+  height: auto;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button {
+  border: none;
+  background-color: #262626;
+  color: #cacaca;
+  padding: 7px 14px;
+  border-radius: 5px;
+}
