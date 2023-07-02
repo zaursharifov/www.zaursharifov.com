@@ -4,13 +4,10 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <svg class="background" width="100%" height="100%">
-        <filter id="pedroduarteisalegend">
-          <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></rect>
-      </svg>
-      Home
+      <h1>hey, I'm zaur</h1>
+      <div className={styles.about}>
+        <Image src={}/>
+      </div>
     </main>
   );
 }
