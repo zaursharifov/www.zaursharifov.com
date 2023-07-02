@@ -1,0 +1,32 @@
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.about {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.links{
+  display: flex;
+  gap: 20px;
+}
+.img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .img{
+    display: none;
+  }
+}
