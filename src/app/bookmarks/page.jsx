@@ -17,9 +17,17 @@ export default function Bookmarks() {
         ))}
       </div>
       <div className={styles.content}>
-        <Link href="/" className={styles.item}>
-          <span>Clip Path</span>
-          <span>helping for something in css</span>
+        <Link href="https://bennettfeely.com/clippy/" target="_blank" className={styles.item}>
+          <span>Bennettfeely</span>
+          <span>css clip-path maker</span>
+        </Link>
+        <Link href="https://cssgradient.io" target="_blank" className={styles.item}>
+          <span>Css Gradient</span>
+          <span>gradiant color generator</span>
+        </Link>
+        <Link href="https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions" target="_blank" className={styles.item}>
+          <span>Blind 75 LeetCode Questions</span>
+          <span>most choosen interview questions</span>
         </Link>
       </div>
     </main>

@@ -25,16 +25,19 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .item {
   background-color: #262626;
   border-radius: 5px;
-  padding: 7px 14px;
+  padding: 8px 14px;
   color: #cacaca;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.item span:first-child {
+  font-size: 0.9em;
 }
 .item span:last-child {
   font-size: 0.8em;

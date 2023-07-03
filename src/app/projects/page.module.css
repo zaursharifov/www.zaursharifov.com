@@ -1,0 +1,27 @@
+.projects {
+  width: 100%;
+  height: auto;
+}
+.item {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #262626;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img {
+  object-fit: cover;
+}
