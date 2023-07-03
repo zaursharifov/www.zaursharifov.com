@@ -1,21 +1,29 @@
 .projects {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .item {
   height: 250px;
+  width: 90%;
   display: flex;
   align-items: center;
-  gap: 20px;
   background-color: #262626;
   border-radius: 10px;
-  overflow: hidden;
+  transition: 0.1s all ease-in-out;
+}
+.item:hover {
+  color: #888888;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
 }
 .about {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 10px;
+  justify-content: space-evenly;
+  padding: 15px 20px;
 }
 .header {
   display: flex;
@@ -24,4 +32,17 @@
 }
 .img {
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tags span {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8em;
 }
