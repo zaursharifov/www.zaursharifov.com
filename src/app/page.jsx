@@ -9,11 +9,8 @@ export default function Home() {
       <div className={styles.about}>
         <Image src="/images/1.jpg" alt="zaur sharifov" width={200} height={250} className={styles.img} />
         <div className={styles.right}>
-          <p>
-            A passionate frontend developer who loves creating beautiful and user-friendly interfaces. I pay close attention to detail and strive for excellence in every design I create. I am always learning and keeping up with the latest web development practices to stay ahead of the curve.
-            <br /><br />
-            P.S. this website is open-source and available on <Link href="/">Github</Link>.
-          </p>
+          <p>A passionate frontend developer who loves creating beautiful and user-friendly interfaces. I pay close attention to detail and strive for excellence in every design I create. I am always learning and keeping up with the latest web development practices to stay ahead of the curve.</p>
+          <p>P.S. this website is open-source and available on <Link href="/">Github</Link>.</p>
           <div className={styles.links}>
             <Link href="/">
               resume{" "}

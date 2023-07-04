@@ -9,17 +9,16 @@
 .about {
   width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 .right {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
 }
 .links{
   display: flex;
   gap: 20px;
-
 }
 .img {
   object-fit: cover;
