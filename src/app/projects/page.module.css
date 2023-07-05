@@ -32,6 +32,10 @@
   align-items: center;
   justify-content: space-between;
 }
+.imgcontainer{
+  width: 300px;
+  height: 250px;
+}
 .img {
   object-fit: cover;
   border-top-left-radius: 10px;
