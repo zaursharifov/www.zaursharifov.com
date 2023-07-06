@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>hey, I`m zaur 👋</h1>
       <div className={styles.about}>
-        <Image src="/images/1.jpg" alt="zaur sharifov" width={200} height={250} className={styles.img} />
+        <Image src="/images/profile.jpg" alt="zaur sharifov" width={200} height={250} className={styles.img} />
         <div className={styles.right}>
           <p>A passionate frontend developer who loves creating beautiful and user-friendly interfaces. I pay close attention to detail and strive for excellence in every design I create. I am always learning and keeping up with the latest web development practices to stay ahead of the curve.</p>
           <p>

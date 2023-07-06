@@ -11,6 +11,10 @@
   "dependencies": {
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
+    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
+    "html-react-parser": "^4.0.0",
+    "moment": "^2.29.4",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"

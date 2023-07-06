@@ -1,0 +1,34 @@
+.detail{
+    width: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.links{
+    font-size: 0.8em;
+    display: flex;
+    gap: 20px;
+}
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.imgcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    object-fit: cover;
+}
+.ul{
+    margin-left: 20px;
+}
+.h3{
+    margin-bottom: 10px;
+}
