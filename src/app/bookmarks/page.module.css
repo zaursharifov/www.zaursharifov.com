@@ -35,6 +35,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: .1s all ease-in-out;
+}
+.item:hover {
+  color: #cacaca;
+  box-shadow: 0 0 2px #fff;
 }
 .item span:first-child {
   font-size: 0.9em;
