@@ -1,8 +1,8 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   const [data, setData] = useState([]);
@@ -23,6 +23,9 @@ export default function Projects() {
             detail {
               html
             }
+            photo {
+              url
+            }
           }
         }`,
       }),
@@ -30,14 +33,12 @@ export default function Projects() {
       .then((res) => res.json())
       .then((res) => setData(res.data.projects));
   }, []);
-  console.log(data)
+
   return (
     <main className={styles.projects}>
-      {/* {projects.map((item, id) => (
-        <Link key={id} href={item.url} className={styles.item}>
-          <div className={styles.imgcontainer}>
-            <img src={item.photo.url} alt="project" className={styles.img} loading="lazy" />
-          </div>
+      {data.map((item) => (
+        <Link key={item.id} href={item.url} className={styles.item} >
+            <Image src={item.photo.url} alt={item.name} className={styles.img} loading="lazy" width={350} height={250} unoptimized/>
           <div className={styles.about}>
             <div className={styles.header}>
               <h3>{item.name}</h3>
@@ -48,34 +49,16 @@ export default function Projects() {
               )}
             </div>
             <p className={styles.text}>{item.description}</p>
-            <div className={styles.tags}>
-              {item.tags.map((tag, tid) => (
-                <span key={tid}>{tag}</span>
-              ))}
-            </div>
+            <div className={styles.tags}></div>
           </div>
         </Link>
-      ))} */}
+      ))}
     </main>
   );
 }
 
-// const projects = [
-//   {
-//     name: "Gerda Butter",
-//     img: "/images/gerdap.png",
-//     link: "/projects/324",
-//     github: "??",
-//     live: "/",
-//     text: "A website for Gerda Butter Company in collaboration with Ef Group. The website included sections for a blog about recipes, an about page, and a contact page. This was my first freelance job.",
-//     tags: ["HTML", "CSS", "Bootstrap", "Javascript"],
-//   },
-//   {
-//     name: "Turaz dictianory by Bitsody",
-//     img: "/images/turaz.png",
-//     link: "/projects/46537",
-//     live: "/",
-//     text: "A mobile application for translating between Turkish and Azerbaijani. The app includes over 90,000 words and can be used without an internet connection.",
-//     tags: ["React Native"],
-//   },
-// ];
+// <div className={styles.tags}>
+//     {item.tags.map((tag, tid) => (
+//         <span key={tid}>{tag}</span>
+//     ))}
+// </div>

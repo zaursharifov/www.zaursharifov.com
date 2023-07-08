@@ -32,13 +32,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.imgcontainer{
-  width: 350px;
-  height: 250px;
-}
 .img {
-  width: 350px;
-  height: 250px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
