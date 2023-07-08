@@ -1,15 +1,42 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cljr5v0nv09y901tc4sb456vd/master", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `{
+          projects {
+            description
+            github
+            id
+            live
+            name
+            url
+            detail {
+              html
+            }
+          }
+        }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => setData(res.data.projects));
+  }, []);
+  console.log(data)
   return (
     <main className={styles.projects}>
-      {projects.map((item, id) => (
-        <Link key={id} href={item.link} className={styles.item}>
+      {/* {projects.map((item, id) => (
+        <Link key={id} href={item.url} className={styles.item}>
           <div className={styles.imgcontainer}>
-            <img src={item.img} alt="project" className={styles.img} loading="lazy" />
+            <img src={item.photo.url} alt="project" className={styles.img} loading="lazy" />
           </div>
           <div className={styles.about}>
             <div className={styles.header}>
@@ -20,7 +47,7 @@ export default function Projects() {
                 </svg>
               )}
             </div>
-            <p className={styles.text}>{item.text}</p>
+            <p className={styles.text}>{item.description}</p>
             <div className={styles.tags}>
               {item.tags.map((tag, tid) => (
                 <span key={tid}>{tag}</span>
@@ -28,27 +55,27 @@ export default function Projects() {
             </div>
           </div>
         </Link>
-      ))}
+      ))} */}
     </main>
   );
 }
 
-const projects = [
-  {
-    name: "Gerda Butter",
-    img: "/images/gerdap.png",
-    link: "/projects/324",
-    github: "??",
-    live: "/",
-    text: "A website for Gerda Butter Company in collaboration with Ef Group. The website included sections for a blog about recipes, an about page, and a contact page. This was my first freelance job.",
-    tags: ["HTML", "CSS", "Bootstrap", "Javascript"],
-  },
-  {
-    name: "Turaz dictianory by Bitsody",
-    img: "/images/turaz.png",
-    link: "/projects/46537",
-    live: "/",
-    text: "A mobile application for translating between Turkish and Azerbaijani. The app includes over 90,000 words and can be used without an internet connection.",
-    tags: ["React Native"],
-  },
-];
+// const projects = [
+//   {
+//     name: "Gerda Butter",
+//     img: "/images/gerdap.png",
+//     link: "/projects/324",
+//     github: "??",
+//     live: "/",
+//     text: "A website for Gerda Butter Company in collaboration with Ef Group. The website included sections for a blog about recipes, an about page, and a contact page. This was my first freelance job.",
+//     tags: ["HTML", "CSS", "Bootstrap", "Javascript"],
+//   },
+//   {
+//     name: "Turaz dictianory by Bitsody",
+//     img: "/images/turaz.png",
+//     link: "/projects/46537",
+//     live: "/",
+//     text: "A mobile application for translating between Turkish and Azerbaijani. The app includes over 90,000 words and can be used without an internet connection.",
+//     tags: ["React Native"],
+//   },
+// ];
