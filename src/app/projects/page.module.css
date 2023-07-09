@@ -27,7 +27,12 @@
   justify-content: space-around;
   padding: 15px 20px;
 }
+.imgcontainer{
+  width: 350px;
+  height: 250px;
+}
 .img {
+  object-position: top;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;

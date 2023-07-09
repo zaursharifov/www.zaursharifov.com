@@ -39,3 +39,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - colors
 - graph cms example
 - MIT license
+
+---
+### Todo
+- Project tags add to graphcms
+- Bookmarks add with category to graphcms
+- responsive design fix
+- data add
+- readme update
