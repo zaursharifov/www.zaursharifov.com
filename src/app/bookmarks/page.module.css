@@ -39,7 +39,7 @@
 }
 .item:hover {
   color: #cacaca;
-  box-shadow: 0 0 2px #fff;
+  background-color: #202020;
 }
 .item span:first-child {
   font-size: 0.9em;

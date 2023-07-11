@@ -13,11 +13,10 @@
   background-color: #262626;
   border-radius: 10px;
   transition: 0.1s all ease-in-out;
-  box-shadow: 0 0 2px #262626;
 }
 .item:hover {
-  color: #888888;
-  box-shadow: 0 0 2px #fff;
+  color: #888;
+  background-color: #202020;
 }
 .about {
   height: 100%;
@@ -26,7 +25,7 @@
   justify-content: space-around;
   padding: 15px 20px;
 }
-.imgcontainer{
+.imgcontainer {
   width: 350px;
   height: 250px;
 }
@@ -51,20 +50,22 @@
   font-size: 0.85em;
 }
 @media (max-width: 768px) {
-  .item{
+  .item {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .imgcontainer{
+  .imgcontainer {
     width: 100%;
   }
-  .img{
+  .img {
     width: 100%;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
-
+  }
+  .about {
+    gap: 30px;
   }
 }
