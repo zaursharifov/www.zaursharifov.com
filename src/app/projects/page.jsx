@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function Projects() {
   const [data, setData] = useState([]);
-  const tags = ["HTML", "CSS", "Bootstrap", "Javascript"];
 
   useEffect(() => {
     fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cljr5v0nv09y901tc4sb456vd/master", {
@@ -27,6 +26,10 @@ export default function Projects() {
             photo {
               url
             }
+            tags {
+              id
+              name
+            }
           }
         }`,
       }),
@@ -46,8 +49,8 @@ export default function Projects() {
             <h3>{item.name}</h3>
             <p className={styles.text}>{item.description}</p>
             <div className={styles.tags}>
-              {tags.map((item) => (
-                <span key={item}>{item}</span>
+              {item.tags.map((i) => (
+                <span key={i.id}>{i.name}</span>
               ))}
             </div>
           </div>
