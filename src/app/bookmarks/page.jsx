@@ -1,34 +1,56 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Bookmarks() {
   const [selected, setSelected] = useState("Tools");
+  const [data, setData] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cljr5v0nv09y901tc4sb456vd/master", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `{
+          bookmarks {
+            desc
+            id
+            link
+            name
+          },
+          categories {
+            id
+            name
+          }
+        }`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.data.bookmarks);
+        setCategories(res.data.categories);
+      });
+  }, []);
 
   return (
     <main className={styles.bookmarks}>
       <div className={styles.header}>
-        {categories.map((item, id) => (
-          <button key={id} className={styles.button} onClick={() => setSelected(item)}>
-            {item}
+        {categories.map((item) => (
+          <button key={item.id} className={styles.button} onClick={() => setSelected(item.name)}>
+            {item.name}
           </button>
         ))}
       </div>
       <div className={styles.content}>
-        <Link href="https://bennettfeely.com/clippy/" target="_blank" className={styles.item}>
-          <span>Bennettfeely</span>
-          <span>css clip-path maker</span>
-        </Link>
-        <Link href="https://cssgradient.io" target="_blank" className={styles.item}>
-          <span>Css Gradient</span>
-          <span>gradiant color generator</span>
-        </Link>
-        <Link href="https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions" target="_blank" className={styles.item}>
-          <span>Blind 75 LeetCode Questions</span>
-          <span>most choosen interview questions</span>
-        </Link>
+        {data.map((item) => (
+          <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
+            <span>{item.name}</span>
+            <span>{item.desc}</span>
+          </Link>
+        ))}
       </div>
     </main>
   );
