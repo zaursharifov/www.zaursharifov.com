@@ -10,7 +10,7 @@ export default function ProjectDetail() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cljr5v0nv09y901tc4sb456vd/master", {
+    fetch(`${process.env.GRAPHQL_CMS_API}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

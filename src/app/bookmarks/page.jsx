@@ -10,7 +10,7 @@ export default function Bookmarks() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cljr5v0nv09y901tc4sb456vd/master", {
+    fetch(`${process.env.GRAPHQL_CMS_API}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -48,12 +48,15 @@ export default function Bookmarks() {
         ))}
       </div>
       <div className={styles.content}>
-        {data.map(item => selected === item.category.id && (
-          <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
-            <span>{item.name}</span>
-            <span>{item.desc}</span>
-          </Link>
-        ))}
+        {data.map(
+          (item) =>
+            selected === item.category.id && (
+              <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
+                <span>{item.name}</span>
+                <span>{item.desc}</span>
+              </Link>
+            ),
+        )}
       </div>
     </main>
   );
