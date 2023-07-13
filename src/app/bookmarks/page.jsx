@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Bookmarks() {
-  const [selected, setSelected] = useState("Tools");
+  const [selected, setSelected] = useState("cljy4uonhbpde0bw45xwpibgw");
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -20,6 +20,9 @@ export default function Bookmarks() {
             id
             link
             name
+            category {
+              id
+            }
           },
           categories {
             id
@@ -39,13 +42,13 @@ export default function Bookmarks() {
     <main className={styles.bookmarks}>
       <div className={styles.header}>
         {categories.map((item) => (
-          <button key={item.id} className={styles.button} onClick={() => setSelected(item.name)}>
+          <button key={item.id} className={styles.button} onClick={() => setSelected(item.id)}>
             {item.name}
           </button>
         ))}
       </div>
       <div className={styles.content}>
-        {data.map((item) => (
+        {data.map(item => selected === item.category.id && (
           <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
             <span>{item.name}</span>
             <span>{item.desc}</span>
