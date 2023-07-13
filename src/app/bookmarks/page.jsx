@@ -61,4 +61,3 @@ export default function Bookmarks() {
     </main>
   );
 }
-const categories = ["Tools", "Applications", "Vs Code Extensions", "React Development", "Js Development"];
