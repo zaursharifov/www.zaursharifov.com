@@ -3,43 +3,33 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 export default function ProjectDetail() {
   const url = window.location.href.split("/").at(-1);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.GRAPHQL_CMS_API}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: `{
-          projects {
-            github
-            live
-            url
-            name
-            detail {
-              html
-              markdown
-              raw
-              text
-            }
-            photo {
-              url
-            }
-          }
-        }`,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res.data.projects));
-  }, []);
+  const [projects] = useFetch(`{
+    projects {
+      description
+      github
+      id
+      live
+      name
+      url
+      detail {
+        html
+      }
+      photo {
+        url
+      }
+      tags {
+        id
+        name
+      }
+  }`);
 
   return (
     <>
-      {data.map(
+      {projects.map(
         (item) =>
           item.url === url && (
             <main key={item.id} className={styles.detail}>

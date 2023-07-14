@@ -3,44 +3,32 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import useFetch from "@/hooks/useFetch";
 
 export default function Projects() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`${process.env.GRAPHQL_CMS_API}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: `{
-          projects {
-            description
-            github
-            id
-            live
-            name
-            url
-            detail {
-              html
-            }
-            photo {
-              url
-            }
-            tags {
-              id
-              name
-            }
-          }
-        }`,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res.data.projects));
-  }, []);
+  const [projects] = useFetch(`{
+    projects {
+      description
+      github
+      id
+      live
+      name
+      url
+      detail {
+        html
+      }
+      photo {
+        url
+      }
+      tags {
+        id
+        name
+      }
+  }`);
 
   return (
     <main className={styles.projects}>
-      {data.map((item) => (
+      {projects.map((item) => (
         <Link key={item.id} href={`/projects/${item.url}`} className={styles.item}>
           <div className={styles.imgcontainer}>
             <Image src={item.photo.url} alt={item.name} className={styles.img} loading="lazy" width={350} height={250} unoptimized />

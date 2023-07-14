@@ -3,40 +3,27 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
+import useFetch from "@/hooks/useFetch";
 
 export default function Bookmarks() {
-  const [selected, setSelected] = useState("cljy4uonhbpde0bw45xwpibgw");
-  const [data, setData] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [selected, setSelected] = useState("clk1bvi19604a09uvficztrjh");
+  const [bookmarks, categories] = useFetch(`{
+    bookmarks {
+      desc
+      id
+      link
+      name
+      category {
+        id
+      }
+    },
+    categories {
+      id
+      name
+    }
+  }`);
 
-  useEffect(() => {
-    fetch(`${process.env.GRAPHQL_CMS_API}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: `{
-          bookmarks {
-            desc
-            id
-            link
-            name
-            category {
-              id
-            }
-          },
-          categories {
-            id
-            name
-          }
-        }`,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res.data.bookmarks);
-        setCategories(res.data.categories);
-      });
-  }, []);
+  // Tools, Interview Questions, Remote jobs, Js development, React development, Applications, VS Code Extensions
 
   return (
     <main className={styles.bookmarks}>
@@ -48,7 +35,7 @@ export default function Bookmarks() {
         ))}
       </div>
       <div className={styles.content}>
-        {data.map(
+        {bookmarks.map(
           (item) =>
             selected === item.category.id && (
               <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
