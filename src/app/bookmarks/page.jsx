@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import useFetch from "@/hooks/useFetch";
 
 export default function Bookmarks() {
   const [selected, setSelected] = useState("clk1bvi19604a09uvficztrjh");
-  const [bookmarks, categories] = useFetch(`{
+  const [bookmarks, categories] = useFetch(
+    `{
     bookmarks {
       desc
       id
@@ -21,7 +22,9 @@ export default function Bookmarks() {
       id
       name
     }
-  }`);
+  }`,
+    "bookmarks",
+  );
 
   // Tools, Interview Questions, Remote jobs, Js development, React development, Applications, VS Code Extensions
 

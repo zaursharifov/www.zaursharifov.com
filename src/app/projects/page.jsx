@@ -1,31 +1,35 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import useFetch from "@/hooks/useFetch";
 
 export default function Projects() {
-  const [projects] = useFetch(`{
-    projects {
-      description
-      github
-      id
-      live
-      name
-      url
-      detail {
-        html
-      }
-      photo {
-        url
-      }
-      tags {
+  const [projects] = useFetch(
+    `{
+      projects {
+        description
+        github
         id
+        live
         name
+        url
+        detail {
+          html
+        }
+        tags {
+          id
+          name
+        }
+        photo {
+          url
+        }
       }
-  }`);
-
+  }`,
+    "projects",
+  );
+  
   return (
     <main className={styles.projects}>
       {projects.map((item) => (

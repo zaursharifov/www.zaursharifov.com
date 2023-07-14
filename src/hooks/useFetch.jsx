@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-const useFetch = (graphQuery) => {
+const useFetch = (graphQuery, page) => {
   const [bookmarks, setBookmarks] = useState([]);
   const [categories, setCategories] = useState([]);
   const [projects, setProjects] = useState([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       await fetch(process.env.GRAPHQL_CMS_API, {
@@ -16,13 +16,19 @@ const useFetch = (graphQuery) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          setBookmarks(res.data.bookmarks);
-          setCategories(res.data.categories);
+          if (page === "bookmarks") {
+            setBookmarks(res.data.bookmarks);
+            setCategories(res.data.categories);
+          }
+          if (page === "projects") {
+            setProjects(res.data.projects);
+          }
         });
     };
     fetchData();
-  }, [graphQuery]);
-  return [bookmarks, categories];
+  }, [graphQuery, page]);
+  console.log(projects);
+  return [bookmarks, categories, projects];
 };
 
 export default useFetch;
