@@ -16,19 +16,18 @@ const useFetch = (graphQuery, page) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          if (page === "bookmarks") {
-            setBookmarks(res.data.bookmarks);
-            setCategories(res.data.categories);
-          }
-          if (page === "projects") {
-            setProjects(res.data.projects);
-          }
+          setBookmarks(res.data.bookmarks);
+          setCategories(res.data.categories);
+          setProjects(res.data.projects);
         });
     };
     fetchData();
   }, [graphQuery, page]);
-  console.log(projects);
-  return [bookmarks, categories, projects];
+  
+  if (page === "bookmarks") {
+    return [bookmarks, categories];
+  }
+  return [projects];
 };
 
 export default useFetch;

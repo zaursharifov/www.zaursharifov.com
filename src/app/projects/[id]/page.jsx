@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import parse from "html-react-parser";
+import useFetch from "@/hooks/useFetch";
 
 export default function ProjectDetail() {
   const url = window.location.href.split("/").at(-1);
@@ -25,7 +26,6 @@ export default function ProjectDetail() {
         }
       }
   }`,
-    "projects",
   );
 
   return (

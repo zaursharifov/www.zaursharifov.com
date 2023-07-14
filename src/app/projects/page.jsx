@@ -27,9 +27,8 @@ export default function Projects() {
         }
       }
   }`,
-    "projects",
   );
-  
+  console.log(projects);
   return (
     <main className={styles.projects}>
       {projects.map((item) => (
