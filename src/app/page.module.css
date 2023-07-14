@@ -20,6 +20,10 @@
   display: flex;
   gap: 20px;
 }
+.imgcontainer{
+  width: 200px;
+  height: 250px;
+}
 .img {
   object-fit: cover;
   border-radius: 10px;

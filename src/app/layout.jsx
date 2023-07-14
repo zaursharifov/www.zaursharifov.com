@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
           <filter id="pedroduarteisalegend">
             <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
           </filter>
-          <rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></rect>
+          <rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></ rect>
         </svg>
         <div className="container">
           <Navbar />
