@@ -42,9 +42,9 @@ export default function ProjectDetail() {
                 </div>
               </div>
               <div className={styles.content}>
-                {/* <div className={styles.imgcontainer}>
+                <div className={styles.imgcontainer}>
                   <Image src={item.photo.url} alt="detail img" width={770} height={400} className={styles.img} />
-                </div> */}
+                </div>
                 <div>{parse(item.detail.html)}</div>
               </div>
             </main>

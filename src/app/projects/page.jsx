@@ -28,13 +28,13 @@ export default function Projects() {
       }
   }`,
   );
-  console.log(projects);
+
   return (
     <main className={styles.projects}>
       {projects.map((item) => (
-        <Link key={item.id} href={`/projects/${item.url}`} className={styles.item}>
+        <Link key={item.id} href={item.url ? `/projects/${item.url}` : item.live} target={!item.url && "_blank"} className={styles.item}>
           <div className={styles.imgcontainer}>
-            <Image src={item.photo.url} alt={item.name} className={styles.img} loading="lazy" width={350} height={250} unoptimized />
+            <Image src={item.photo.url} alt={item.name} className={styles.img} priority width={350} height={250} unoptimized />
           </div>
           <div className={styles.about}>
             <h3>{item.name}</h3>

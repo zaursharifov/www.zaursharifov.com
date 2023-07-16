@@ -32,3 +32,5 @@ Run this to start project:
 ```
 npm run dev
 ```
+
+## Buy me a coffee
