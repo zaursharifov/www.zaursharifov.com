@@ -8,7 +8,7 @@ export default function Home() {
       <h1>hey, I`m zaur 👋</h1>
       <div className={styles.about}>
         <div className={styles.imgcontainer}>
-          <Image src="/profile.jpg" alt="zaur sharifov" width={200} height={250} className={styles.img} />
+          <Image src="/profile.jpg" alt="zaur sharifov" width={200} height={250} className={styles.img} placeholder="blur" blurDataURL={"/profile.jpg"} />
         </div>
         <div className={styles.right}>
           <p>A passionate frontend developer who loves creating beautiful and user-friendly interfaces. I pay close attention to detail and strive for excellence in every design I create. I am always learning and keeping up with the latest web development practices to stay ahead of the curve.</p>
