@@ -1,12 +1,4 @@
-## Code blocks
-
-## Todo
-
-## Technologies, Colors
-
 # Zaur Sharifov
-
----
 
 img
 
@@ -27,24 +19,16 @@ npm install
 ```
 
 Clone Graphcms scheme using link:
+```
 https://github.com/zeraphosa/www.zaursharifov.com.git
-Click Project settings > Envirements, copy api link
-Create .env.local file outside of src folder and add GRAPHQL_CMS_API = your-api-link.
-Run this to start project:
+```
 
+- Create your project, bookmark contents.
+- Click Project settings > Envirements, copy api link.
+- Create .env.local file outside of src folder and add GRAPHQL_CMS_API = your-api-link.
+- Give permission for public to see contents in Project Setting > API
+
+Run this to start project:
 ```
 npm run dev
-```
-
-Fill contents in graphcms!
-
-## Background dot effect
-
-```
-   <svg class="background" width="100%" height="100%">
-        <filter id="pedroduarteisalegend">
-        <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch"></feTurbulence>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#pedroduarteisalegend)"></ rect>
-    </svg>
 ```
