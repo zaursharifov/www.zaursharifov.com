@@ -1,0 +1,49 @@
+.bookmarks {
+  width: 100%;
+  height: auto;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.button {
+  border: none;
+  background-color: #262626;
+  color: #cacaca;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+}
+.button:hover {
+  color: #fff;
+}
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  background-color: #262626;
+  border-radius: 5px;
+  padding: 8px 14px;
+  color: #cacaca;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .1s all ease-in-out;
+}
+.item:hover {
+  color: #cacaca;
+  background-color: #202020;
+}
+.item span:first-child {
+  font-size: 0.9em;
+}
+.item span:last-child {
+  font-size: 0.8em;
+}
