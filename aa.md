@@ -27,6 +27,7 @@ https://github.com/zeraphosa/www.zaursharifov.com.git
 - Click Project settings > Envirements, copy api link.
 - Create .env.local file outside of src folder and add GRAPHQL_CMS_API = your-api-link.
 - Give permission for public to see contents in Project Setting > API
+- For deploying add ```exportTrailingSlash: true``` in your next.config.js file
 
 Run this to start project:
 ```

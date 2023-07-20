@@ -8,6 +8,7 @@ const nextConfig = {
   env: {
     GRAPHQL_CMS_API: process.env.GRAPHQL_CMS_API,
   },
+  // exportTrailingSlash: true,
 };
 
 module.exports = nextConfig;
