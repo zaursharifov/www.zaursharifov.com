@@ -4,6 +4,23 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import useFetch from "@/hooks/useFetch";
+import { motion } from "framer-motion";
+
+const container = {
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+const item = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 export default function Bookmarks() {
   const [selected, setSelected] = useState("clk1bvi19604a09uvficztrjh");
@@ -37,17 +54,19 @@ export default function Bookmarks() {
           </button>
         ))}
       </div>
-      <div className={styles.content}>
+      <motion.div className={styles.content} initial="hidden" animate="visible" variants={container}>
         {bookmarks.map(
-          (item) =>
-            selected === item.category.id && (
-              <Link key={item.id} href={item.link} target="_blank" className={styles.item}>
-                <span>{item.name}</span>
-                <span>{item.desc}</span>
-              </Link>
+          (bookmark) =>
+            selected === bookmark.category.id && (
+              <motion.div key={bookmark.id} variants={item}>
+                <Link href={bookmark.link} target="_blank" className={styles.item}>
+                  <span>{bookmark.name}</span>
+                  <span>{bookmark.desc}</span>
+                </Link>
+              </motion.div>
             ),
         )}
-      </div>
+      </motion.div>
     </main>
   );
 }

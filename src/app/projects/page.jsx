@@ -1,9 +1,27 @@
 "use client";
+
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import useFetch from "@/hooks/useFetch";
+import { motion } from "framer-motion";
+
+const container = {
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+const item = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 export default function Projects() {
   const [projects] = useFetch(
@@ -28,25 +46,26 @@ export default function Projects() {
       }
   }`,
   );
-
   return (
-    <main className={styles.projects}>
-      {projects.map((item) => (
-        <Link key={item.id} href={item.url ? `/projects/${item.url}` : item.live} target={!item.url && "_blank"} className={styles.item}>
-          <div className={styles.imgcontainer}>
-            <Image src={item.photo.url} alt={item.name} className={styles.img} priority width={350} height={250} unoptimized />
-          </div>
-          <div className={styles.about}>
-            <h3>{item.name}</h3>
-            <p className={styles.text}>{item.description}</p>
-            <div className={styles.tags}>
-              {item.tags.map((i) => (
-                <span key={i.id}>{i.name}</span>
-              ))}
+    <motion.main className={styles.projects} variants={container} initial="hidden" animate="visible">
+      {projects.map((project) => (
+        <motion.div key={project.id} variants={item}>
+          <Link href={project.url ? `/projects/${project.url}` : project.live} target={!project.url && "_blank"} className={styles.item}>
+            <div className={styles.imgcontainer}>
+              <Image src={project.photo.url} alt={project.name} className={styles.img} priority width={350} height={250} unoptimized />
             </div>
-          </div>
-        </Link>
+            <div className={styles.about}>
+              <h3>{project.name}</h3>
+              <p className={styles.text}>{project.description}</p>
+              <div className={styles.tags}>
+                {project.tags.map((tag) => (
+                  <span key={tag.id}>{tag.name}</span>
+                ))}
+              </div>
+            </div>
+          </Link>
+        </motion.div>
       ))}
-    </main>
+    </motion.main>
   );
 }

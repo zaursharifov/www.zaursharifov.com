@@ -1,10 +1,12 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <motion.main className={styles.main} initial={{opacity: 0}} animate={{opacity: 1}}>
       <h1>hey, I`m zaur 👋</h1>
       <div className={styles.about}>
         <div className={styles.imgcontainer}>
@@ -29,7 +31,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }
 
