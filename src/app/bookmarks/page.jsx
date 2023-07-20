@@ -26,7 +26,7 @@ export default function Bookmarks() {
   const [selected, setSelected] = useState("clk1bvi19604a09uvficztrjh");
   const [bookmarks, categories] = useFetch(
     `{
-    bookmarks {
+    bookmarks(first:100) {
       desc
       id
       link
