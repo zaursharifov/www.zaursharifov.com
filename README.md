@@ -1,49 +1,41 @@
-ckThis is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zaur Sharifov
+
+![Website img](./readme-docs/1.png)
+
+Portfolio website to showcase your projects and bookmarks. Built with Next.js, CSS, Framer Motion and HygraphCMS. View the live site. About permissions see MIT License here.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+git clone https://github.com/zeraphosa/www.zaursharifov.com.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install npm packages:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Clone GraphCMS scheme:
+```
+https://github.com/zeraphosa/www.zaursharifov.com.git
+```
+In GraphCMS:
+- Create your project, bookmark contents.
+- ```Click Project settings > Envirements```, copy api link.
+- Create .env.local file outside of src folder and add ```GRAPHQL_CMS_API = your-api-link```.
+- Give permission for public to see contents in ```Project Setting > API```
+- To build production ready project add ```exportTrailingSlash: true``` in your next.config.js file
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-- launch
-- .env file
-- background svg
+Run this to start project:
+```
+npm run dev
+```
+## Todo
+- background svg add
 - colors
 - graph cms example
 - MIT license
-
----
-### Todo
-- Project tags add to graphcms
-- Bookmarks add with category to graphcms
-- responsive design fix
-- data add
-- readme update
+ 
