@@ -30,6 +30,9 @@
 }
 
 @media (max-width: 500px) {
+  .imgcontainer{
+    display: none;
+  }
   .img{
     display: none;
   }

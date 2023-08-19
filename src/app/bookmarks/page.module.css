@@ -21,11 +21,13 @@
   color: #fff;
 }
 .content {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  /* width: 100%; */
+  /* height: auto; */
+  /* display: flex; */
+  /* flex-direction: column; */
   gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
 .item {
   background-color: #262626;
@@ -35,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: .1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 .item:hover {
   color: #cacaca;
@@ -46,4 +48,9 @@
 }
 .item span:last-child {
   font-size: 0.8em;
+}
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: repeat(1, 100%);
+  }
 }
