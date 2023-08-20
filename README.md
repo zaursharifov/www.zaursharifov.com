@@ -19,23 +19,25 @@ npm install
 ```
 
 Clone GraphCMS scheme:
+
 ```
 https://github.com/zeraphosa/www.zaursharifov.com.git
 ```
+
 In GraphCMS:
+
 - Create your project, bookmark contents.
-- ```Click Project settings > Envirements```, copy api link.
-- Create .env.local file outside of src folder and add ```GRAPHQL_CMS_API = your-api-link```.
-- Give permission for public to see contents in ```Project Setting > API```
-- To build production ready project add ```exportTrailingSlash: true``` in your next.config.js file
+- `Click Project settings > Envirements`, copy api link.
+- Create .env.local file outside of src folder and add `GRAPHQL_CMS_API = your-api-link`.
+- Give permission for public to see contents in `Project Setting > API`
+- To build production ready project add `exportTrailingSlash: true` in your next.config.js file
 
 Run this to start project:
+
 ```
 npm run dev
 ```
+
 ## Todo
-- background svg add
-- colors
 - graph cms example
-- MIT license
- 
+- MIT license add
