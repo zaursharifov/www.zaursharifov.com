@@ -21,7 +21,7 @@ npm install
 Clone GraphCMS scheme:
 
 ```
-https://github.com/zeraphosa/www.zaursharifov.com.git
+
 ```
 
 In GraphCMS:
@@ -37,7 +37,3 @@ Run this to start project:
 ```
 npm run dev
 ```
-
-## Todo
-- graph cms example
-- MIT license add
